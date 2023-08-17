@@ -9,9 +9,9 @@ const BadgeLayout = ({ children }: BadgeLayoutProps) => {
   return (
     <div className="v-screen h-screen bg-[#B6B6B6]">
       <Header />
-      <div>
+      <div className="relative h-full w-full">
         <div>{children}</div>
-        <div>
+        <div className="absolute bottom-[100px] right-[50px]">
           <Badge />
         </div>
       </div>
