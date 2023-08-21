@@ -9,6 +9,9 @@
     "editor.formatOnSave": true
   },
   "cSpell.words": [
+    "animejs",
+    "greensock",
+    "gsap",
     "redwoodjs"
   ]
 }

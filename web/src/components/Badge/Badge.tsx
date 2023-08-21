@@ -1,41 +1,44 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
-import { motion, useDragControls } from 'framer-motion'
+import { gsap } from 'gsap'
+import { Draggable } from 'gsap/Draggable'
 
-const Badge = () => {
-  const controls = useDragControls()
-  const [offset, setOffset] = useState(0)
+const Badge = ({ bounds }) => {
+  const myDraggable = useRef(null)
+  const badgeRef = useRef(null)
 
-  useEffect(() => {
-    console.log({ controls })
-  }, [controls])
+  useLayoutEffect(() => {
+    gsap.registerPlugin(Draggable)
+
+    const BADGE = '#badge'
+
+    // CREATE THE TIMELINE
+    const CORD_TL = gsap.timeline({ paused: true })
+    CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: -22, duration: 0.1 }))
+    CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: 12, duration: 0.1 }))
+    CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: 0, duration: 0.1 }))
+
+    // CREATE THE DRAGGABLE
+    myDraggable.current = Draggable.create(BADGE, {
+      onDrag: function () {
+        gsap.to(BADGE, {
+          rotation: this.x / 50,
+          transformOrigin: 'center top',
+          duration: 0,
+        })
+      },
+    })[0]
+    return () => myDraggable.current[0].kill()
+  }, [])
 
   return (
-    <motion.div
-      drag
-      dragConstraints={{
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
-      // dragTransition={{  }}
-      dragElastic={0.2}
-      whileHover={{ scale: 1.01 }}
-      whileTap={{
-        boxShadow: '0px 0px 15px rgba(0,0,0,0.2)',
-        // rotate element based on how far it's dragged
-        rotate: offset,
-      }}
-      className="h-[537px] w-[351px]"
-      dragControls={controls}
-    >
+    <div ref={badgeRef} id="badge">
       <img
         src="/images/tag.png"
         alt="conference badge"
         className="pointer-events-none h-[537px] w-[351px]"
       />
-    </motion.div>
+    </div>
   )
 }
 

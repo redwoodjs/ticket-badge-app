@@ -3398,6 +3398,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gsap/member@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@gsap/member@npm:3.12.2"
+  checksum: d2e19ce488058186de2782a67ff1e9eeeaa83b7e2cd95a00e18b058f27ab82c0d3809228368c335206ab10b750018be6c31b99c06f5c5f573f92a2b75789fa79
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -12358,6 +12365,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@file:/Users/amydutton/Dropbox/DOWNLOADS/gsap-member/npm-install-this/gsap-bonus.tgz::locator=web%40workspace%3Aweb":
+  version: 3.12.2
+  resolution: "gsap@file:/Users/amydutton/Dropbox/DOWNLOADS/gsap-member/npm-install-this/gsap-bonus.tgz::locator=web%40workspace%3Aweb"
+  checksum: 662753dc8f009283843ccc5add9f361f69e1a2868e53dcd49555a782c984d2d8e8b3b1efc6ff3eca5b6733db6de69a18ba6444cc68b6ebbacb6d9b11ca0d4b02
+  languageName: node
+  linkType: hard
+
 "gzip-size@npm:^6.0.0":
   version: 6.0.0
   resolution: "gzip-size@npm:6.0.0"
@@ -21129,12 +21143,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
+    "@gsap/member": ^3.12.2
     "@redwoodjs/forms": 6.0.7
     "@redwoodjs/router": 6.0.7
     "@redwoodjs/vite": 6.0.7
     "@redwoodjs/web": 6.0.7
     autoprefixer: ^10.4.15
     framer-motion: ^10.16.0
+    gsap: /Users/amydutton/Dropbox/DOWNLOADS/gsap-member/npm-install-this/gsap-bonus.tgz
     postcss: ^8.4.28
     postcss-loader: ^7.3.3
     prop-types: 15.8.1
