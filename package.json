@@ -7,7 +7,7 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "6.1.0",
+    "@redwoodjs/core": "7.0.0-canary.226",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
   "eslintConfig": {
@@ -29,5 +29,9 @@
     "glob": "^10.3.3",
     "node-html-parser": "^6.1.6",
     "tsx": "^3.12.7"
+  },
+  "resolutions": {
+    "@apollo/client": "3.8.1",
+    "@apollo/experimental-nextjs-app-support@0.4.1": "patch:@apollo/experimental-nextjs-app-support@npm%3A0.4.1#./.yarn/patches/@apollo-experimental-nextjs-app-support-npm-0.4.1-de585a5c53.patch"
   }
 }

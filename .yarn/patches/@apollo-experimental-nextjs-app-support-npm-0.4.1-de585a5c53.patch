@@ -1,0 +1,30 @@
+diff --git a/dist/ssr/RehydrationContext.js b/dist/ssr/RehydrationContext.js
+index 28367f189dafc08a93a84e5008cc37ce919785b1..ad722c161550b4c0ca644c04166b4a7e0703a2d8 100644
+--- a/dist/ssr/RehydrationContext.js
++++ b/dist/ssr/RehydrationContext.js
+@@ -7,7 +7,7 @@ exports.useRehydrationContext = exports.RehydrationContextProvider = void 0;
+ const client_1 = require("@apollo/client");
+ const react_1 = __importDefault(require("react"));
+ const NextSSRInMemoryCache_1 = require("./NextSSRInMemoryCache");
+-const navigation_1 = require("next/navigation");
++const navigation_1 = require("@redwoodjs/web");
+ const dataTransport_1 = require("./dataTransport");
+ const ts_invariant_1 = __importDefault(require("ts-invariant"));
+ const NextSSRApolloClient_1 = require("./NextSSRApolloClient");
+@@ -40,7 +40,7 @@ const RehydrationContextProvider = ({ children, }) => {
+ exports.RehydrationContextProvider = RehydrationContextProvider;
+ function useRehydrationContext() {
+     const rehydrationContext = react_1.default.useContext(ApolloRehydrationContext);
+-    const insertHtml = react_1.default.useContext(navigation_1.ServerInsertedHTMLContext);
++    const insertHtml = react_1.default.useContext(navigation_1.ServerHtmlContext);
+     // help transpilers to omit this code in bundling
+     if (typeof window !== "undefined")
+         return;
+@@ -54,6 +54,7 @@ function useRehydrationContext() {
+ }
+ exports.useRehydrationContext = useRehydrationContext;
+ function buildApolloRehydrationContext() {
++    console.log('xxxxx buildApolloRehydrationContext')
+     const rehydrationContext = {
+         currentlyInjected: false,
+         transportValueData: {},

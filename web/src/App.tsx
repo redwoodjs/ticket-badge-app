@@ -1,5 +1,7 @@
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
-import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
+
+// @MARK Hi Amy, watch out for this one! 👇 This is what enables Cell Suspense & SSR
+import { RedwoodApolloProvider } from '@redwoodjs/web/dist/apollo/suspense'
 
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
