@@ -15,6 +15,8 @@ const Routes = () => {
   return (
     <Router>
       <Set wrap={BadgeLayout}>
+        <Route path="/share" page={SharePage} name="share" />
+        <Route path="/customize" page={CustomizeTicketPage} name="customizeTicket" />
         <Route path="/" page={HomePage} name="home" />
       </Set>
       <Route notfound page={NotFoundPage} />

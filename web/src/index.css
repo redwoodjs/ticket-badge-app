@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 /**
  * START --- SETUP TAILWINDCSS EDIT
  *
@@ -11,3 +13,67 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+
+ /* eagle sight */
+@font-face {
+  font-family: "Eagle Sight";
+  src: url("/fonts/eagleSight/EagleSightRegular.ttf") format("truetype"),
+    url("/fonts/eagleSight/eaglesightregular-webfont.woff") format("woff"),
+    url("/fonts/eagleSight/eaglesightregular-webfont.woff2") format("woff2");
+}
+
+/* sherman */
+@font-face {
+  font-family: "Sherman";
+  src: url("/fonts/sherman/Sherman-Display.woff") format("woff"),
+    url("/fonts/sherman/Sherman-Display.woff2") format("woff2");
+}
+
+@layer base {
+  header nav ul {
+    @apply p-0 m-0 flex items-center gap-x-12;
+  }
+
+  header nav ul li {
+    @apply uppercase font-wide text-sm text-[#807272] hover:text-indianRed;
+  }
+
+  label {
+    @apply absolute font-sans font-bold transition-all duration-300 ease-in-out;
+  }
+
+  label:has(+ input[type="email"]:placeholder-shown) {
+    @apply pointer-events-none top-10 text-xl;
+  }
+
+  label:has(+ input[type="email"]:focus),
+  label:has(+ input[type="email"]) {
+    @apply text-sm top-6
+  }
+
+}
+
+@layer components {
+  .page {
+    @apply max-w-[700px] pt-10;
+  }
+
+  .page-title {
+    @apply font-condensed text-[142px] leading-[0.9] text-darkSlateGray;
+  }
+
+  .subheading {
+    @apply font-wide text-xl text-steelBlue;
+  }
+
+  .share-button {
+    @apply bg-black text-white font-sans leading-[24px] rounded-md py-4 font-bold flex items-center justify-center;
+  }
+}
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
+}

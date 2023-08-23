@@ -1,0 +1,105 @@
+License to use the fonts
+
+
+Entry into force: (2021-05-10)
+
+1.	Purpose
+
+The purpose if this license is to complete the license granted by the owner of typefaces and fonts (hereinafter: the “Licensor”) for the use of said typefaces and fonts (hereinafter: the “Fonts”).
+
+This license applies to any person or entity (hereinafter: the “Licensee”) to whom the company EMDASH (French joint stock company, RCS Paris 850 815 333, 9 rue Sainte Apolline, 75003 Paris, France –hereinafter « EMDASH ») has granted a license to use the Fonts, in the name and on behalf of the Licensor (Ellen Luff Type Foundry).
+
+Together with the Licensor’s license (https://eula.ellenlufftype.com/), this license form an inseparable contractual whole (hereinafter: the “EULA License”) which binds every person or entity who has subscribed a license to use the Fonts at EMDASH. In the event of any inconsistency between this license and the Licensor’s license, this license shall prevail.
+
+2.	Effective date of the EULA License
+
+The EULA License takes effect when the Licensee concludes with EMDASH a license to use the Licensor’s Fonts.
+
+The Licensee expressly acknowledges and accepts that any use of the Fonts must be done in compliance with the EULA License.
+
+Therefore, the acceptance of the EULA License can only be full and complete. Any qualified acceptance is considered as null and void. Any Licensee who does not accept to be bound by the EULA License must not use the Fonts, in any manner whatsoever.
+
+3.	Conditions of use of the Fonts
+
+The Fonts that are proposed by the Licensor are protected by all intellectual property rights, or rights for the creators of databases, in force.
+
+The EULA License can in no way be construed as conferring to the Licensee, either express or implied, any property right, including intellectual property right, on the Fonts.
+
+The Licensee is only granted a license to use the Fonts, pursuant to the provisions set forth in the EULA License. Any other use which is not granted under the EULA License is strictly forbidden.
+
+If the Licensee is not sure whether its use of the Fonts complies with the EULA License, it is its responsibility to contact the Licensor. Any absence of reply or specific restriction of use by the Licensor shall in no case be construed as an authorization for such use.
+
+The Licensee undertakes not to bring any modification on the software enabling the generation of Fonts made available within the EULA License (hereinafter: the “Font Software”), as well as not to create any derivative work of the Font Software.
+
+The Licensee also undertakes to refrain from any act likely to damage the brand image of the Fonts and/or the reputation of the Licensor and EMDASH. It undertakes to notify the Licensor and EMDASH with any infringement act committed by any third-party of which it will have knowledge.
+
+The Licensee also undertakes not to convey or assign all or part of its rights and obligations under the EULA License, without the Licensor’s prior written consent.
+
+4.	Control of the use of the Fonts
+
+The Licensee is hereby informed and accepts that the Fonts are identified by a serial number, for purposes of enabling their traceability, as well as verifying that their use comply with the provisions set forth under the EULA License.
+
+The Licensor, or any other person it shall appoint for that purpose, including EMDASH where appropriate, reserves the right to request to the Licensee all and any complementary information, document and/or evidence on the terms under which the Licensee uses the Fonts, for purpose of verifying that the Licensee abides by all the provisions of the EULA License. The Licensee undertakes to communicate to the Licensor, or to its authorized representative where applicable, all the required elements within the time limit set.
+
+The Licensor also reserves le right to control at any time, either directly or through the auditor of its choice, the conditions, including technical conditions, under which the Licensee uses the Fonts and more generally, the compliance by the Licensee with the terms of the EULA License, subject to prior notice to the Licensee at least 15 (fifteen) days beforehand.
+
+5.	Sanction for the Licensee’s breaches
+
+In the event of a breach by the Client of any of the provisions of the EULA License, the Licensor reserves the right to take any measures it deems appropriate, including:
+
+-	To charge the Licensee with any compensation for the non-authorized use of the Fonts;
+-	To impose to the Licensee any remedy it shall seem necessary to warrant a use of the Fonts which complies with the EULA License;
+-	To commence and prosecute any legal proceedings.
+
+The Licensor also reserves the right to terminate the EULA License:
+
+-	either in full law, 15 (fifteen) days after reception, by the Licensee, of a formal notice, sent by registered letter with acknowledgement of receipt and stating the intention to apply this clause, which remained ineffective, 
+-	either immediately, in case of irremediable breach by the Licensee, in which case the termination shall take effect in full law at the date the formal notice stating the breach is sent by registered letter, or where applicable international register letter, with acknowledgement of receipt.
+
+Irremediable breach by the Licensee shall include:
+
+-	infringement by the Licensee of the Licensor’s intellectual property rights;
+-	the repetition by the Licensee of a breach which were already notified by registered letter with acknowledgement of receipt.
+
+The above remedies are without prejudice of any damages that could be claimed to the Licensee for the infringement of the Fonts, as well as the payment by the Licensee of all the costs exposed by the Licensor, including lawyer’s fees and bailiff’s charges, for purposes of putting an end to the breaches by the Licensee of its obligations under the EULA License.
+
+6.	Limitation of liability of the Licensor
+
+The Licensor makes no warranty or representation, whether express or implied, other than those expressly set out in the EULA License, on the Fonts and the Font Software which are provided “AS IS” to the Licensee. In that respect, the Licensor does not warrant the Licensee (i) that the Font Software, which is subject to constant research to improve their performance and progress, will be totally free of errors, faults or defects, (ii) that the Fonts shall specifically meet the Licensee’s needs or expectations.
+
+In the same way, the Licensor shall not be held liable in case of momentary difficulty or impossibility to use the Font Software and/or the Fonts which is caused by circumstances being outside the Licensor 's control or by force majeure.
+
+In any event, any liability that could be incurred by the Licensor within the EULA License is is expressly and solely limited to direct actual damages suffered by the Licensee and cannot exceed the total amount invoiced by the Licensor in the 12 (twelve) months prior to the time the alleged damages occurred.
+
+7.	Confidentiality
+
+Each of the parties undertakes to keep strictly confidential all documents, elements, data and information belonging to and disclosed by the other party and that are expressly identified by the other party as confidential (hereinafter: the “Confidential Information”).
+
+The party receiving Confidential Information undertakes not to disclose it without the prior consent of the other party for a period of 3 (three) years from the end of performance of the relevant services. The receiving party may only transmit Confidential Information to employees, collaborators, trainees or consultants if they are bound by the same obligation of confidentiality as provided for herein.
+
+This obligation does not extend to documents, elements, data and information:
+
+(i)	of which the receiving party already had knowledge;
+(ii)	which were already public at the time of their communication or which would become public without breach of this confidentiality requirement;
+(iii)	which have been received from a third party in a legal manner;
+(iv)	the disclosure of which is required by judicial authorities, pursuant to laws and regulations or in order to establish a party's rights under these Terms and Conditions.
+
+8.	Miscellaneous
+
+8.1	Independant parties
+
+It is expressly agreed that neither of the parties can invoke the provisions of the EULA License to claim to be an agent, an officer or an employee of the other party, nor make any commitment in the name and on behalf of the other Party, beyond the provisions set forth herein.
+
+No legal structure of any kind is formed between the parties hereunder. Each party retains its autonomy, its responsibilities and its own clients
+
+8.2	Autonomy of the EULA License, severability and amendments
+
+The EULA License constitutes the entire and sole agreement between the parties for the use of the Fonts. It supersedes all prior undertakings, either written or oral, relating to its purpose.
+
+In the event that any clause of the EULA License is declared void, unwritten or unenforceable, such clause shall be deemed null and void and shall not affect the validity or continuity of the EULA License as a whole. The Parties shall discuss in good faith the necessary amendments so that the new clause reflect their original intention.
+
+Any modification or amendment to the EULA License must be subject to a written addendum.
+
+8.3	Non-waiver
+
+If one of the parties does not enforce any of its rights or does not demand the execution of any of the obligations or responsibilities of the other party under the EULA License, this shall not in itself be regarded as a waiver by such party of its rights, obligations and responsibilities under the EULA License.
