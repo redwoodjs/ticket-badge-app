@@ -40,31 +40,17 @@
   }
 
   header nav ul li {
-    @apply uppercase font-wide text-sm text-[#807272] hover:text-indianRed;
+    @apply uppercase font-wide text-sm text-[#807272] hover:text-chestnutRose;
   }
-
-  label {
-    @apply absolute font-sans font-bold transition-all duration-300 ease-in-out;
-  }
-
-  label:has(+ input[type="email"]:placeholder-shown) {
-    @apply pointer-events-none top-10 text-xl;
-  }
-
-  label:has(+ input[type="email"]:focus),
-  label:has(+ input[type="email"]) {
-    @apply text-sm top-6
-  }
-
 }
 
 @layer components {
   .page {
-    @apply max-w-[700px] pt-10;
+    @apply max-w-[700px] pt-4;
   }
 
   .page-title {
-    @apply font-condensed text-[142px] leading-[0.9] text-darkSlateGray;
+    @apply font-condensed text-[112px] leading-[0.9] text-darkSlateGray;
   }
 
   .subheading {
@@ -72,7 +58,21 @@
   }
 
   .share-button {
-    @apply bg-black text-white font-sans leading-[24px] rounded-md py-4 font-bold flex items-center justify-center gap-x-3;
+    @apply bg-black text-white font-sans leading-[24px] rounded-md py-4 font-bold flex items-center justify-center gap-x-3 w-full hover:bg-gray-900;
+  }
+
+  /* virtual ticket form */
+  .virtual-ticket-form label {
+    @apply absolute font-sans font-bold transition-all duration-300 ease-in-out;
+  }
+
+  .virtual-ticket-form label:has(+ input[type="email"]:placeholder-shown) {
+    @apply pointer-events-none top-10 text-xl;
+  }
+
+  .virtual-ticket-form label:has(+ input[type="email"]:focus),
+  .virtual-ticket-form label:has(+ input[type="email"]) {
+    @apply text-sm top-6
   }
 }
 

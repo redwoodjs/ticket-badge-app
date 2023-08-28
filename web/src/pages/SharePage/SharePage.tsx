@@ -1,9 +1,19 @@
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import Icon from 'src/components/Icon/Icon'
+import { useCopyToClipboard } from 'src/hooks/useCopyToClipboard'
 
 const SharePage = () => {
+  const [, copy] = useCopyToClipboard()
+  const [copyShareText, setCopyShareText] = React.useState('Copy Share URL')
+
+  const copyToClipboard = () => {
+    const text = 'http://google.com'
+    copy(text)
+    setCopyShareText('Copied!')
+    setTimeout(() => setCopyShareText('Copy Share URL'), 1000)
+  }
+
   return (
     <>
       <MetaTags title="Share" description="Share page" />
@@ -14,28 +24,28 @@ const SharePage = () => {
           <h2 className="subheading mb-12">September 27 - 28, 2023</h2>
           <div className="grid w-full grid-cols-2 gap-5">
             <div>
-              <a href="#" className="share-button">
+              <button className="share-button">
                 <Icon id="twitter" />
                 Share on X / Twitter
-              </a>
+              </button>
             </div>
             <div>
-              <a href="#" className="share-button">
+              <button onClick={copyToClipboard} className="share-button">
                 <Icon id="copy" />
-                Copy Share URL
-              </a>
+                {copyShareText}
+              </button>
             </div>
             <div>
-              <a href="#" className="share-button">
+              <button className="share-button">
                 <Icon id="download" />
                 Download Image
-              </a>
+              </button>
             </div>
             <div>
-              <a href="#" className="share-button">
+              <button className="share-button">
                 <Icon id="calendar" />
                 Add to Calendar
-              </a>
+              </button>
             </div>
           </div>
         </div>

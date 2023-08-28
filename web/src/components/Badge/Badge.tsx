@@ -147,7 +147,7 @@ const Badge = () => {
           <h3 className="m-0 -mb-1 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-sandyBrown">
             Amy
           </h3>
-          <h3 className="m-0 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-indianRed">
+          <h3 className="m-0 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-chestnutRose">
             Dutton
           </h3>
           <h4 className="font-wide text-sm uppercase leading-none text-white">

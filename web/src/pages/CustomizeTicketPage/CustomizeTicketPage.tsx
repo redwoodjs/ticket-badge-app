@@ -11,7 +11,7 @@ const CustomizeTicketPage = () => {
       <main className="page flex h-full items-center">
         <div>
           <h1 className="page-title">You&apos;re In!</h1>
-          <h2 className="subheading mb-12 text-indianRed">Now Make it Yours</h2>
+          <h2 className="subheading mb-12 text-chestnutRose">Now Make it Yours</h2>
           <a href="https://github.com" className="share-button mb-4">
             <Icon id="github" />
             Customize Your Ticket
