@@ -1,4 +1,5 @@
 export const Constants = Object.freeze({
-  ABOUT: 'hhttps://www.redwoodjsconf.com/',
+  BASE_URL: 'http://localhost:8910',
+  ABOUT: 'https://www.redwoodjsconf.com/',
   SPEAKERS: 'https://www.redwoodjsconf.com/speakers',
 })

@@ -3,41 +3,55 @@ export const schema = gql`
     id: Int!
     name: String!
     slug: String!
-    logo: String!
-    code: String!
-    discount: Int!
-    endDate: DateTime
+    logo: String
+    avatar: String
+    virtualCode: String
+    virtualDiscount: Int
+    virtualEndDate: DateTime
+    inPersonCode: String
+    inPersonDiscount: Int
+    inPersonEndDate: DateTime
     Participants: [Participant]!
     createdAt: DateTime!
   }
 
   type Query {
-    partners: [Partner!]! @requireAuth
-    partner(id: Int!): Partner @requireAuth
+    partners: [Partner!]! @skipAuth
+    partnersCompaniesOnly: [Partner!]! @skipAuth
+    partnersSpeakersOnly: [Partner!]! @skipAuth
+    partner(id: Int!): Partner @skipAuth
     partnerBySlug(slug: String!): Partner @skipAuth
   }
 
   input CreatePartnerInput {
     name: String!
     slug: String!
-    logo: String!
-    code: String!
-    discount: Int!
-    endDate: DateTime
+    logo: String
+    avatar: String
+    virtualCode: String
+    virtualDiscount: Int
+    virtualEndDate: DateTime
+    inPersonCode: String
+    inPersonDiscount: Int
+    inPersonEndDate: DateTime
   }
 
   input UpdatePartnerInput {
     name: String
     slug: String
     logo: String
-    code: String
-    discount: Int
-    endDate: DateTime
+    avatar: String
+    virtualCode: String
+    virtualDiscount: Int
+    virtualEndDate: DateTime
+    inPersonCode: String
+    inPersonDiscount: Int
+    inPersonEndDate: DateTime
   }
 
   type Mutation {
-    createPartner(input: CreatePartnerInput!): Partner! @requireAuth
-    updatePartner(id: Int!, input: UpdatePartnerInput!): Partner! @requireAuth
-    deletePartner(id: Int!): Partner! @requireAuth
+    createPartner(input: CreatePartnerInput!): Partner! @skipAuth
+    updatePartner(id: Int!, input: UpdatePartnerInput!): Partner! @skipAuth
+    deletePartner(id: Int!): Partner! @skipAuth
   }
 `

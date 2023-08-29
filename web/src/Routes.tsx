@@ -9,27 +9,29 @@
 
 import { Router, Route, Set } from '@redwoodjs/router'
 
-import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
-
 import { useAuth } from './auth'
+import AdminLayout from './layouts/AdminLayout/AdminLayout'
+import AuthLayout from './layouts/AuthLayout/AuthLayout'
 import BadgeLayout from './layouts/BadgeLayout/BadgeLayout'
 
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
-      <Set wrap={ScaffoldLayout} title="Partners" titleTo="partners" buttonLabel="New Partner" buttonTo="newPartner">
-        <Route path="/partners/new" page={PartnerNewPartnerPage} name="newPartner" />
-        <Route path="/partners/{id:Int}/edit" page={PartnerEditPartnerPage} name="editPartner" />
-        <Route path="/partners" page={PartnerPartnersPage} name="partners" />
+      <Set wrap={AdminLayout}>
+        <Route path="/admin/speakers" page={AdminSpeakersPage} name="speakers" />
+        <Route path="/admin/dashboard" page={AdminDashboardPage} name="dashboard" />
+        <Route path="/admin/partners" page={AdminPartnersPage} name="partners" />
+        <Route path="/admin/users" page={AdminUsersPage} name="users" />
       </Set>
-      <Route path="/login" page={LoginPage} name="login" />
-      <Route path="/signup" page={SignupPage} name="signup" />
-      <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-      <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
+      <Set wrap={AuthLayout}>
+        <Route path="/login" page={AuthLoginPage} name="login" />
+        <Route path="/signup" page={AuthSignupPage} name="signup" />
+        <Route path="/forgot-password" page={AuthForgotPasswordPage} name="forgotPassword" />
+        <Route path="/reset-password" page={AuthResetPasswordPage} name="resetPassword" />
+      </Set>
       <Set wrap={BadgeLayout}>
         <Route path="/share" page={SharePage} name="share" />
         <Route path="/customize" page={CustomizeTicketPage} name="customizeTicket" />
-        <Route path="/" page={HomePage} name="home" />
         <Route path="/{slug:String}" page={HomePage} name="partner" />
       </Set>
       <Route notfound page={NotFoundPage} />

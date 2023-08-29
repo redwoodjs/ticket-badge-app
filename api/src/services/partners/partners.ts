@@ -10,6 +10,18 @@ export const partners: QueryResolvers['partners'] = () => {
   return db.partner.findMany()
 }
 
+export const partnersCompaniesOnly: QueryResolvers['partners'] = () => {
+  return db.partner.findMany({
+    where: { logo: { not: null } },
+  })
+}
+
+export const partnersSpeakersOnly: QueryResolvers['partners'] = () => {
+  return db.partner.findMany({
+    where: { avatar: { not: null } },
+  })
+}
+
 export const partner: QueryResolvers['partner'] = ({ id }) => {
   return db.partner.findUnique({
     where: { id },

@@ -1,0 +1,14 @@
+/* eagle sight */
+@font-face {
+  font-family: "Eagle Sight";
+  src: url("../public/fonts/eagleSight/EagleSightRegular.ttf") format("truetype"),
+    url("../public/fonts/eagleSight/eaglesightregular-webfont.woff") format("woff"),
+    url("../public/fonts/eagleSight/eaglesightregular-webfont.woff2") format("woff2");
+}
+
+/* sherman */
+@font-face {
+  font-family: "Sherman";
+  src: url("../public/fonts/sherman/Sherman-Display.woff") format("woff"),
+    url("../public/fonts/sherman/Sherman-Display.woff2") format("woff2");
+}

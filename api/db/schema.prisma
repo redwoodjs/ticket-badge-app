@@ -17,18 +17,23 @@ model User {
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
+  confirmed           Boolean   @default(false)
 }
 
 model Partner {
-  id           Int           @id @default(autoincrement())
-  name         String
-  slug         String        @unique
-  logo         String
-  code         String
-  discount     Int
-  endDate      DateTime?
-  Participants Participant[]
-  createdAt    DateTime      @default(now())
+  id               Int           @id @default(autoincrement())
+  name             String
+  slug             String        @unique
+  logo             String?
+  avatar           String?
+  virtualCode      String?
+  virtualDiscount  Int?
+  virtualEndDate   DateTime?
+  inPersonCode     String?
+  inPersonDiscount Int?
+  inPersonEndDate  DateTime?
+  Participants     Participant[]
+  createdAt        DateTime      @default(now())
 }
 
 model Participant {

@@ -2,11 +2,17 @@
 
 export type IconName =
 	| "calendar"
+	| "check"
+	| "close"
 	| "copy"
 	| "download"
 	| "edit"
 	| "eye"
 	| "github"
+	| "hide"
+	| "plus-only"
 	| "plus"
+	| "show"
 	| "trash"
-	| "twitter";
+	| "twitter"
+	| "upload";

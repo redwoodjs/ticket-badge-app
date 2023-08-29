@@ -22,4 +22,8 @@ export default meta
 
 type Story = StoryObj<typeof Icon>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    id: 'check',
+  },
+}

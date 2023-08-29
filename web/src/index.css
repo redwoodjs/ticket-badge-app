@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&Roboto+Mono:wght@400&display=swap');
 
 /**
  * START --- SETUP TAILWINDCSS EDIT
@@ -14,8 +14,7 @@
  * END --- SETUP TAILWINDCSS EDIT
  */
 
-
- /* eagle sight */
+/* eagle sight */
 @font-face {
   font-family: "Eagle Sight";
   src: url("/fonts/eagleSight/EagleSightRegular.ttf") format("truetype"),
@@ -42,6 +41,23 @@
   header nav ul li {
     @apply uppercase font-wide text-sm text-[#807272] hover:text-chestnutRose;
   }
+
+  label {
+    @apply font-wide text-sm block mb-3;
+  }
+
+  input[type="number"],
+  input[type="text"] {
+    @apply min-h-[60px] w-full border-1 border-white bg-transparent text-white px-5 focus:outline-none;
+  }
+
+  input[type="date"] {
+    @apply min-h-[60px] w-full border-1 border-white bg-transparent text-white px-5 focus:outline-none;
+  }
+
+  input[type="date"] + svg {
+    @apply absolute right-0 top-7 mr-5 mt-5 pointer-events-none;
+  }
 }
 
 @layer components {
@@ -57,11 +73,14 @@
     @apply font-wide text-xl text-steelBlue;
   }
 
+  .field {
+    @apply mb-7 relative
+  }
+
   .share-button {
     @apply bg-black text-white font-sans leading-[24px] rounded-md py-4 font-bold flex items-center justify-center gap-x-3 w-full hover:bg-gray-900;
   }
 
-  /* virtual ticket form */
   .virtual-ticket-form label {
     @apply absolute font-sans font-bold transition-all duration-300 ease-in-out;
   }
@@ -73,6 +92,37 @@
   .virtual-ticket-form label:has(+ input[type="email"]:focus),
   .virtual-ticket-form label:has(+ input[type="email"]) {
     @apply text-sm top-6
+  }
+
+  .admin-nav ul li a,
+  .admin-nav ul li button {
+    @apply text-darkGray text-sm hover:text-black
+  }
+
+  .admin-nav ul li a.active-nav {
+    @apply text-steelBlue;
+  }
+
+  .partner-table {
+    @apply grid grid-cols-[120px_1fr_120px_120px_120px_200px] gap-x-10 items-center;
+  }
+
+  .partner-table > div:nth-child(5) {
+    @apply text-center;
+  }
+
+  .partner-table:not([role="columnheader"]) > div:nth-child(3),
+  .partner-table:not([role="columnheader"]) > div:nth-child(4) {
+    @apply font-mono text-sm
+  }
+
+  [role="columnheader"] {
+    @apply font-wide text-steelBlue text-sm pb-2 items-end
+  }
+
+  .arrow--top:after {
+    content: '';
+    @apply absolute left-0 right-0 mx-auto w-0 h-0 border-t-[8px] border-t-black border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent -bottom-2;
   }
 }
 
