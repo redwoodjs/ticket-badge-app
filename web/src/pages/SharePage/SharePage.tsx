@@ -7,6 +7,7 @@ const SharePage = () => {
   const [, copy] = useCopyToClipboard()
   const [copyShareText, setCopyShareText] = React.useState('Copy Share URL')
 
+  // TODO: Update Share URL
   const copyToClipboard = () => {
     const text = 'http://google.com'
     copy(text)

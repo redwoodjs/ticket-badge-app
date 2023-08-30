@@ -31,14 +31,10 @@ const CREATE_PARTICIPANT_MUTATION = gql`
 `
 
 const ParticipantForm = ({ partner }: Props) => {
-  console.log({ partner })
-
   const formMethods = useForm()
-  const [participantIdCookie, updateParticipantIdCookie] = useCookie(
-    'participantId',
-    ''
-  )
-  const [_, updateParticipantEmailCookie] = useCookie('participantEmail', '')
+  const [participantIdCookie, updateParticipantIdCookie] =
+    useCookie('participantId')
+  const [_, updateParticipantEmailCookie] = useCookie('participantEmail')
 
   // check to see if a cookie exists
   useEffect(() => {

@@ -12,7 +12,6 @@ const HomePage = ({ slug }: Props) => {
       <MetaTags title="Home" description="Home page" />
 
       <main className="page">
-        {/* TODO: Use Cookies to determine if the user has already completed the form */}
         <ParticipantCell slug={slug} />
       </main>
     </>

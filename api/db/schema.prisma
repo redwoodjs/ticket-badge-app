@@ -40,11 +40,13 @@ model Partner {
 
 model Participant {
   id        Int      @id @default(autoincrement())
-  firstName String?
-  lastName  String?
+  name      String?
   email     String   @unique
   company   String?
   avatar    String?
+  githubId  Int?
+  location  String?
+  twitter   String?
   partner   Partner  @relation(fields: [partnerId], references: [id])
   partnerId Int
   createdAt DateTime @default(now())

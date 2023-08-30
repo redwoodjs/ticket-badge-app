@@ -22,7 +22,7 @@ const setItem = (key: string, value: string, numberOfDays: number) => {
 
 type useCookieTuple = [string, (param: string, days: number) => void]
 
-const useCookie = (key: string, defaultValue: string): useCookieTuple => {
+const useCookie = (key: string, defaultValue = ''): useCookieTuple => {
   const getCookie = () => getItem(key) || defaultValue
   const [cookie, setCookie] = useState(getCookie())
 

@@ -1,11 +1,13 @@
 export const schema = gql`
   type Participant {
     id: Int!
-    firstName: String
-    lastName: String
+    name: String
     email: String!
     company: String
     avatar: String
+    githubId: Int
+    location: String
+    twitter: String
     partner: Partner!
     partnerId: Int!
     createdAt: DateTime!
