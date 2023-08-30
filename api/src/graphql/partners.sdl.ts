@@ -13,6 +13,7 @@ export const schema = gql`
     inPersonEndDate: DateTime
     Participants: [Participant]!
     createdAt: DateTime!
+    PartnerType: PartnerType!
   }
 
   type Query {
@@ -34,6 +35,7 @@ export const schema = gql`
     inPersonCode: String
     inPersonDiscount: Int
     inPersonEndDate: DateTime
+    partnerTypeId: Int!
   }
 
   input UpdatePartnerInput {

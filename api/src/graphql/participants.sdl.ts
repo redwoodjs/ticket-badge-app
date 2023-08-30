@@ -1,27 +1,27 @@
 export const schema = gql`
   type Participant {
     id: Int!
-    firstName: String!
-    lastName: String!
+    firstName: String
+    lastName: String
     email: String!
-    company: String!
-    avatar: String!
+    company: String
+    avatar: String
     partner: Partner!
     partnerId: Int!
     createdAt: DateTime!
   }
 
   type Query {
-    participants: [Participant!]! @requireAuth
-    participant(id: Int!): Participant @requireAuth
+    participants: [Participant!]! @skipAuth
+    participant(id: Int!): Participant @skipAuth
   }
 
   input CreateParticipantInput {
-    firstName: String!
-    lastName: String!
+    firstName: String
+    lastName: String
     email: String!
-    company: String!
-    avatar: String!
+    company: String
+    avatar: String
     partnerId: Int!
   }
 
@@ -35,9 +35,9 @@ export const schema = gql`
   }
 
   type Mutation {
-    createParticipant(input: CreateParticipantInput!): Participant! @requireAuth
+    createParticipant(input: CreateParticipantInput!): Participant! @skipAuth
     updateParticipant(id: Int!, input: UpdateParticipantInput!): Participant!
-      @requireAuth
-    deleteParticipant(id: Int!): Participant! @requireAuth
+      @skipAuth
+    deleteParticipant(id: Int!): Participant! @skipAuth
   }
 `

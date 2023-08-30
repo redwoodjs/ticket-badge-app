@@ -12,13 +12,13 @@ export const partners: QueryResolvers['partners'] = () => {
 
 export const partnersCompaniesOnly: QueryResolvers['partners'] = () => {
   return db.partner.findMany({
-    where: { logo: { not: null } },
+    where: { partnerTypeId: 2 },
   })
 }
 
 export const partnersSpeakersOnly: QueryResolvers['partners'] = () => {
   return db.partner.findMany({
-    where: { avatar: { not: null } },
+    where: { partnerTypeId: 1 },
   })
 }
 
