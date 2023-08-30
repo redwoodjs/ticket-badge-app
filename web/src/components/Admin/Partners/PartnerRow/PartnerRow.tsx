@@ -55,7 +55,7 @@ const PartnerRow = ({ partner }: Props) => {
         </div>
         <div>
           <a
-            href={`${Constants.BASE_URL}/${partner.slug}`}
+            href={`${process.env.REDWOOD_ENV_BASE_URL}/${partner.slug}`}
             target="_blank"
             className="font-bold underline hover:no-underline"
             rel="noreferrer"
@@ -76,13 +76,13 @@ const PartnerRow = ({ partner }: Props) => {
         <div>24</div>
         <div className="flex items-center justify-between">
           <CopyButtonWithTooltip
-            textToCopy={`${Constants.BASE_URL}/${partner.slug}`}
+            textToCopy={`${process.env.REDWOOD_ENV_BASE_URL}/${partner.slug}`}
             defaultToolTipText="Copy Badge Page URL"
           >
             <Icon id="copy" />
           </CopyButtonWithTooltip>
           <LinkWithToolTip
-            href={`${Constants.BASE_URL}/${partner.slug}`}
+            href={`${process.env.REDWOOD_ENV_BASE_URL}/${partner.slug}`}
             toolTipText="View Badge Page"
           >
             <Icon id="show" />

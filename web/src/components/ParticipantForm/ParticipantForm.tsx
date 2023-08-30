@@ -60,7 +60,6 @@ const ParticipantForm = ({ partner }: Props) => {
   )
 
   const onSubmit = (data) => {
-    console.log({ data })
     createParticipant({
       variables: {
         email: data.email,

@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 
-const Badge = () => {
+const Badge = ({ avatar, firstName, lastName, company }) => {
   const comp = useRef()
   const badgeRef = useRef(null)
   const myDraggable = useRef(null)
@@ -144,20 +144,28 @@ const Badge = () => {
           <div className="card-shadow absolute inset-0 bg-[#747474] blur-[42px]" />
         </div>
         <div className="absolute left-[70px] top-[335px] z-content pr-4 text-white">
-          <h3 className="m-0 -mb-1 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-sandyBrown">
-            Amy
-          </h3>
-          <h3 className="m-0 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-chestnutRose">
-            Dutton
-          </h3>
-          <h4 className="font-wide text-sm uppercase leading-none text-white">
-            preston-werner ventures
-          </h4>
-          <img
-            src="https://picsum.photos/seed/1692657545635/300/300"
-            alt="Amy Dutton"
-            className="float-right h-[120px] w-[120px] rounded-full border-2 border-white"
-          />
+          {firstName && (
+            <h3 className="m-0 -mb-1 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-sandyBrown">
+              {firstName}
+            </h3>
+          )}
+          {lastName && (
+            <h3 className="m-0 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-chestnutRose">
+              {lastName}
+            </h3>
+          )}
+          {company && (
+            <h4 className="font-wide text-sm uppercase leading-none text-white">
+              {company}
+            </h4>
+          )}
+          {avatar && (
+            <img
+              src={avatar}
+              alt={`${firstName} ${lastName}`}
+              className="float-right h-[120px] w-[120px] rounded-full border-2 border-white"
+            />
+          )}
         </div>
       </div>
     </div>
