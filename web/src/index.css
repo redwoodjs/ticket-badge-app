@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&Roboto+Mono:wght@400&display=swap');
 
 /**
@@ -62,7 +63,7 @@
 
 @layer components {
   .page {
-    @apply max-w-[700px] pt-4;
+    @apply max-w-[600px] pt-4;
   }
 
   .page-title {
@@ -103,14 +104,21 @@
     @apply text-steelBlue;
   }
 
-  .partner-table {
-    @apply grid grid-cols-[120px_1fr_120px_120px_120px_200px] gap-x-10 items-center;
+  .speakers-table {
+    @apply grid grid-cols-[60px_1fr_150px_150px_120px_200px] gap-x-10 items-center;
   }
 
+  .partner-table {
+    @apply grid grid-cols-[120px_1fr_150px_150px_120px_200px] gap-x-10 items-center;
+  }
+
+  .speakers-table > div:nth-child(5),
   .partner-table > div:nth-child(5) {
     @apply text-center;
   }
 
+  .speakers-table:not([role="columnheader"]) > div:nth-child(3),
+  .speakers-table:not([role="columnheader"]) > div:nth-child(4),
   .partner-table:not([role="columnheader"]) > div:nth-child(3),
   .partner-table:not([role="columnheader"]) > div:nth-child(4) {
     @apply font-mono text-sm

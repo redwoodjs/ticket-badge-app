@@ -8,6 +8,8 @@
     ]
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.2",
     "@gsap/member": "^3.12.2",
     "@redwoodjs/auth-dbauth-web": "6.1.0",
     "@redwoodjs/forms": "6.1.0",

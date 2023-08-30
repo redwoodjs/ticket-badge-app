@@ -2217,6 +2217,49 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudinary/html@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "@cloudinary/html@npm:1.11.2"
+  dependencies:
+    "@types/lodash.clonedeep": ^4.5.6
+    "@types/lodash.debounce": ^4.0.6
+    "@types/node": ^14.14.10
+    lodash.clonedeep: ^4.5.0
+    lodash.debounce: ^4.0.8
+    typescript: ^4.1.2
+  checksum: 3517163598ab74ef78bcfbd227cf27c10432bfd3bcdd08f733d57509843222c9d03f13043f121c8d4e2df3af65db407ea7718bfbb9317a7558bdf360fb42bd71
+  languageName: node
+  linkType: hard
+
+"@cloudinary/react@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "@cloudinary/react@npm:1.11.2"
+  dependencies:
+    "@cloudinary/html": ^1.11.2
+  peerDependencies:
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0
+  checksum: 03f2e70f22de2ccbca9a886f4d64d353434341906684ee706ed1a9960988a81c0bea96379312a3b14ced9d12b6f68e4fdd9368487f89b54ab7570f5d210528fb
+  languageName: node
+  linkType: hard
+
+"@cloudinary/transformation-builder-sdk@npm:^1.5.1":
+  version: 1.6.1
+  resolution: "@cloudinary/transformation-builder-sdk@npm:1.6.1"
+  dependencies:
+    "@cloudinary/url-gen": ^1.7.0
+  checksum: 5f91a78f3cd3b0e7d605fc576c8909cfeb15e52ccda476ba9d346ea5d52783e55df4db55cabfa24f8d71461ae4a3a1592c65d495792384703c91963ee1987652
+  languageName: node
+  linkType: hard
+
+"@cloudinary/url-gen@npm:^1.11.2, @cloudinary/url-gen@npm:^1.7.0":
+  version: 1.11.2
+  resolution: "@cloudinary/url-gen@npm:1.11.2"
+  dependencies:
+    "@cloudinary/transformation-builder-sdk": ^1.5.1
+  checksum: 34abdb85ce5b4678665c1ef6124728c75e4f650bf6bc5af4f104425fb4bce50e127bc91ee5963c968da5b5cd18d9e46e5b84bca8f789657008a26862d81e95f8
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -7867,7 +7910,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.167":
+"@types/lodash.clonedeep@npm:^4.5.6":
+  version: 4.5.7
+  resolution: "@types/lodash.clonedeep@npm:4.5.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 214c0fe6a89a5d0c75f148a8c7134e212453caace259fcf0be79e67ceff72015a2fa6335758a8cc3231222f34b3968f8c6adf6f49626594f80ccbc276dd1744d
+  languageName: node
+  linkType: hard
+
+"@types/lodash.debounce@npm:^4.0.6":
+  version: 4.0.7
+  resolution: "@types/lodash.debounce@npm:4.0.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 8d4063d40f82900b6ac6b52429a05bdce5925084f03b83e49fbae656986ceab836857490ee8140133d3270c6bdbc0a6e74be9e9e0bff871ded7e42e2a811b729
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*, @types/lodash@npm:^4.14.167":
   version: 4.14.197
   resolution: "@types/lodash@npm:4.14.197"
   checksum: fd66d680293b24f9ecd44c0963e5f75b04d05d95bb31d51ad0ae84abae8e14f6b98f2721199b293a8596102acff49db43816e6a6baca4085165a4fe80f49124e
@@ -7944,6 +8005,13 @@ __metadata:
   version: 18.16.18
   resolution: "@types/node@npm:18.16.18"
   checksum: 1ad22342d1aaad446625e7eb2ca6137d0036fbc451fcb367c005ed4d6a102190bbba3d104652b2f9a73d0e520752b98fb89f22f5ef8fe09e8487bcb6fd75223f
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.14.10":
+  version: 14.18.56
+  resolution: "@types/node@npm:14.18.56"
+  checksum: c45befcd97b98ddb97acb7c98b2a7b4d8ff33922f517368f756d7ebb17e75d04b2adda0583c4d8a9efec7c8918c650465ec219096bba3de2631796a39b553275
   languageName: node
   linkType: hard
 
@@ -17790,6 +17858,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.clonedeep@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "lodash.clonedeep@npm:4.5.0"
+  checksum: 2caf0e4808f319d761d2939ee0642fa6867a4bbf2cfce43276698828380756b99d4c4fa226d881655e6ac298dd453fe12a5ec8ba49861777759494c534936985
+  languageName: node
+  linkType: hard
+
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
@@ -24024,6 +24099,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:^4.1.2":
+  version: 4.9.5
+  resolution: "typescript@npm:4.9.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 5f6cad2e728a8a063521328e612d7876e12f0d8a8390d3b3aaa452a6a65e24e9ac8ea22beb72a924fd96ea0a49ea63bb4e251fb922b12eedfb7f7a26475e5c56
+  languageName: node
+  linkType: hard
+
 "typescript@patch:typescript@5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
   resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
@@ -24031,6 +24116,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: c2bded58ab897a8341fdbb0c1d92ea2362f498cfffebdc8a529d03e15ea2454142dfbf122dabbd9a5cb79b7123790d27def16e11844887d20636226773ed329a
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.1.2#~builtin<compat/typescript>":
+  version: 4.9.5
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: e3333f887c6829dfe0ab6c1dbe0dd1e3e2aeb56c66460cb85c5440c566f900c833d370ca34eb47558c0c69e78ced4bfe09b8f4f98b6de7afed9b84b8d1dd06a1
   languageName: node
   linkType: hard
 
@@ -24740,6 +24835,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
+    "@cloudinary/react": ^1.11.2
+    "@cloudinary/url-gen": ^1.11.2
     "@gsap/member": ^3.12.2
     "@redwoodjs/auth-dbauth-web": 6.1.0
     "@redwoodjs/forms": 6.1.0

@@ -2,8 +2,7 @@ import type { PartnersQuery } from 'types/graphql'
 
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
-import PartnerRow from '../PartnerRow/PartnerRow'
-import PartnersTable from '../PartnersTable/PartnersTable'
+import PartnerRow from 'src/components/Admin/Partners/PartnerRow/PartnerRow'
 
 export const QUERY = gql`
   query PartnersQuery {

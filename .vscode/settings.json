@@ -10,6 +10,7 @@
   },
   "cSpell.words": [
     "animejs",
+    "Cloudinary",
     "DISTX",
     "DISTY",
     "ENDX",
@@ -19,6 +20,7 @@
     "gsap",
     "redwoodjs",
     "Roboto",
-    "signup"
+    "signup",
+    "Slideout"
   ]
 }

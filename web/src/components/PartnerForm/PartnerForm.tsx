@@ -1,25 +1,100 @@
+import { useEffect } from 'react'
+
 import { Partner } from 'types/graphql'
 
-import { EmailField, Form, Label, useForm } from '@redwoodjs/forms'
+import {
+  EmailField,
+  FieldError,
+  Form,
+  FormError,
+  HiddenField,
+  Label,
+  useForm,
+} from '@redwoodjs/forms'
+import { navigate, routes } from '@redwoodjs/router'
+import { useMutation } from '@redwoodjs/web'
+import { toast } from '@redwoodjs/web/toast'
+
+import useCookie from 'src/hooks/useCookie'
 
 interface Props {
   partner: Partial<Omit<Partner, 'Participants'>>
 }
 
+const CREATE_PARTICIPANT_MUTATION = gql`
+  mutation createParticipantMutation($email: String!, $partnerId: Int!) {
+    createParticipant(input: { email: $email, partnerId: $partnerId }) {
+      id
+      email
+    }
+  }
+`
+
 const PartnerForm = ({ partner }: Props) => {
   const formMethods = useForm()
+  const [participantIdCookie, updateParticipantIdCookie] = useCookie(
+    'participantId',
+    ''
+  )
+  const [_, updateParticipantEmailCookie] = useCookie('participantEmail', '')
+
+  // check to see if a cookie exists
+  useEffect(() => {
+    if (participantIdCookie) {
+      navigate(routes.customizeTicket())
+    }
+  }, [participantIdCookie])
+
+  const [createParticipant, { loading, error }] = useMutation(
+    CREATE_PARTICIPANT_MUTATION,
+    {
+      onCompleted: (data) => {
+        if (error) {
+          console.error(error)
+          toast.error(error.message)
+        } else {
+          // set a cookie with the participant id inside
+          updateParticipantIdCookie(data.createParticipant.id, 30)
+          updateParticipantEmailCookie(data.createParticipant.email, 30)
+        }
+      },
+    }
+  )
 
   const onSubmit = (data) => {
-    console.log(data)
-    // redirect to
+    console.log({ data })
+    createParticipant({
+      variables: {
+        email: data.email,
+        partnerId: parseInt(data.partnerId),
+      },
+    })
     formMethods.reset()
   }
 
   return (
     <>
       <div className="mb-6 flex items-center gap-5 text-center font-wide uppercase">
-        <img src={partner.logo} alt={partner.name} className="max-h-[60px]" />
-        invites you to
+        {partner.logo && (
+          <>
+            <img
+              src={partner.logo}
+              alt={partner.name}
+              className="max-h-[60px]"
+            />
+            invites you to
+          </>
+        )}
+        {partner.avatar && (
+          <>
+            <img
+              src={partner.avatar}
+              alt={partner.name}
+              className="aspect-square max-h-[60px] rounded-full object-cover"
+            />
+            {partner.name} invites you to
+          </>
+        )}
       </div>
 
       <div>
@@ -48,6 +123,7 @@ const PartnerForm = ({ partner }: Props) => {
           </a>
         </h2>
         <Form formMethods={formMethods} onSubmit={onSubmit}>
+          <FormError />
           <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-[#D3D3D3] px-9 pb-7 pt-10">
             <Label name="email" htmlFor="email">
               Enter Your Email Address
@@ -58,8 +134,12 @@ const PartnerForm = ({ partner }: Props) => {
               placeholder=" " // required
               validation={{ required: true }}
             />
-            <input type="hidden" name="partnerId" value={partner.id} />
-            <button className="w-full rounded-lg bg-steelBlue py-3 font-wide text-white hover:bg-darkSlateGray">
+            <FieldError name="email" className="error-message" />
+            <HiddenField name="partnerId" value={partner.id} />
+            <button
+              className="w-full rounded-lg bg-steelBlue py-3 font-wide text-white hover:bg-darkSlateGray"
+              disabled={loading}
+            >
               Yes, please!
             </button>
           </div>

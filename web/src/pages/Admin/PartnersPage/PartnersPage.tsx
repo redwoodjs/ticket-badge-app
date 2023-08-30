@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { MetaTags } from '@redwoodjs/web'
 
 import AddButton from 'src/components/Admin/AddButton/AddButton'
-import PartnerForm from 'src/components/Admin/PartnerForm/PartnerForm'
-import PartnersCell from 'src/components/Admin/PartnersCell'
+import PartnerForm from 'src/components/Admin/Partners/PartnerForm/PartnerForm'
+import PartnersCell from 'src/components/Admin/Partners/PartnersCell'
 import SlideOut from 'src/components/Admin/SlideOut/SlideOut'
 
 const PartnersPage = () => {
@@ -38,7 +38,10 @@ const PartnersPage = () => {
         isShowing={isPartnerFormShowing}
         handleClose={() => setIsPartnerFormShowing(false)}
       >
-        <PartnerForm state="add" />
+        <PartnerForm
+          state="add"
+          onSubmit={() => setIsPartnerFormShowing(false)}
+        />
       </SlideOut>
     </>
   )

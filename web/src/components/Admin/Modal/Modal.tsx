@@ -21,7 +21,7 @@ const Modal = ({ children, handleClose, isShowing = false }) => {
   return (
     <AnimatePresence>
       {isShowing && (
-        <div className="fixed inset-0 flex items-center justify-center">
+        <div className="z-modal fixed inset-0 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -30,9 +30,9 @@ const Modal = ({ children, handleClose, isShowing = false }) => {
             <Overlay />
           </motion.div>
           <motion.div
-            initial={{ y: -50 }}
-            animate={{ y: 0 }}
-            exit={{ y: -50 }}
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -50, opacity: 0 }}
             className="relative z-overlayContent h-[200px] w-[500px] rounded-xl border-1 border-gray-300 bg-white shadow-lg"
             ref={slideOutPanelRef}
           >

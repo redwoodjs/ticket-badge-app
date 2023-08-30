@@ -15,6 +15,7 @@ module.exports = {
         gainsboro: '#E2E2E2',
       },
       zIndex: {
+        modal: 930,
         overlayContent: 902,
         overlaySlideout: 901,
         overlay: 900,
