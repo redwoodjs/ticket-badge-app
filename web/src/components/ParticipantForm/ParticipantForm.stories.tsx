@@ -12,14 +12,14 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import PartnerForm from './PartnerForm'
+import ParticipantForm from './ParticipantForm'
 
-const meta: Meta<typeof PartnerForm> = {
-  component: PartnerForm,
+const meta: Meta<typeof ParticipantForm> = {
+  component: ParticipantForm,
 }
 
 export default meta
 
-type Story = StoryObj<typeof PartnerForm>
+type Story = StoryObj<typeof ParticipantForm>
 
 export const Primary: Story = {}

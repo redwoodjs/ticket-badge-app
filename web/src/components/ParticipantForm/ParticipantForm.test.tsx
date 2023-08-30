@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import PartnerForm from './PartnerForm'
+import ParticipantForm from './ParticipantForm'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('PartnerForm', () => {
+describe('ParticipantForm', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<PartnerForm />)
+      render(<ParticipantForm />)
     }).not.toThrow()
   })
 })

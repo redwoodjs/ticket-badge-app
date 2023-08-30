@@ -2,7 +2,7 @@ import type { partnerBySlugQuery } from 'types/graphql'
 
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
-import PartnerForm from '../PartnerForm/PartnerForm'
+import ParticipantForm from '../ParticipantForm/ParticipantForm'
 
 export const QUERY = gql`
   query partnerBySlugQuery($slug: String!) {
@@ -33,5 +33,5 @@ export const Failure = ({ error }: CellFailureProps) => (
 export const Success = ({
   partnerBySlug,
 }: CellSuccessProps<partnerBySlugQuery>) => {
-  return <PartnerForm partner={partnerBySlug} />
+  return <ParticipantForm partner={partnerBySlug} />
 }

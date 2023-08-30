@@ -1,6 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
 
-import PartnerCell from 'src/components/PartnerCell'
+import ParticipantCell from 'src/components/ParticipantCell'
 
 interface Props {
   slug: string
@@ -13,7 +13,7 @@ const HomePage = ({ slug }: Props) => {
 
       <main className="page">
         {/* TODO: Use Cookies to determine if the user has already completed the form */}
-        <PartnerCell slug={slug} />
+        <ParticipantCell slug={slug} />
       </main>
     </>
   )

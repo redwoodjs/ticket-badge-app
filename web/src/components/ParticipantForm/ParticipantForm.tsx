@@ -30,7 +30,9 @@ const CREATE_PARTICIPANT_MUTATION = gql`
   }
 `
 
-const PartnerForm = ({ partner }: Props) => {
+const ParticipantForm = ({ partner }: Props) => {
+  console.log({ partner })
+
   const formMethods = useForm()
   const [participantIdCookie, updateParticipantIdCookie] = useCookie(
     'participantId',
@@ -149,4 +151,4 @@ const PartnerForm = ({ partner }: Props) => {
   )
 }
 
-export default PartnerForm
+export default ParticipantForm

@@ -1,3 +1,5 @@
+// TODO: Duplicate mutation names inside SpeakerMutations.ts
+
 export const CREATE_PARTNER_MUTATION = gql`
   mutation createPartnerMutation(
     $name: String!
