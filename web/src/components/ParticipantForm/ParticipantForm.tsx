@@ -19,6 +19,7 @@ import useCookie from 'src/hooks/useCookie'
 
 interface Props {
   partner: Partial<Omit<Partner, 'Participants'>>
+  participantName?: string
 }
 
 const CREATE_PARTICIPANT_MUTATION = gql`
@@ -30,7 +31,7 @@ const CREATE_PARTICIPANT_MUTATION = gql`
   }
 `
 
-const ParticipantForm = ({ partner }: Props) => {
+const ParticipantForm = ({ partner, participantName = '' }: Props) => {
   const formMethods = useForm()
   const [participantIdCookie, updateParticipantIdCookie] =
     useCookie('participantId')
@@ -71,7 +72,7 @@ const ParticipantForm = ({ partner }: Props) => {
 
   return (
     <>
-      <div className="mb-6 flex items-center gap-5 text-center font-wide uppercase">
+      <div className="mb-6 flex items-center gap-5 whitespace-nowrap text-center font-wide uppercase">
         {partner.logo && (
           <>
             <img
@@ -79,7 +80,7 @@ const ParticipantForm = ({ partner }: Props) => {
               alt={partner.name}
               className="max-h-[60px]"
             />
-            invites you to
+            {participantName ? `& ${participantName} invite` : 'invites'} you to
           </>
         )}
         {partner.avatar && (
@@ -89,8 +90,15 @@ const ParticipantForm = ({ partner }: Props) => {
               alt={partner.name}
               className="aspect-square max-h-[60px] rounded-full object-cover"
             />
-            {partner.name} invites you to
+            {partner.name}{' '}
+            {participantName ? `& ${participantName} invite` : 'invites'} you to
           </>
+        )}
+        {!partner.avatar && !partner.logo && (
+          <span>
+            {partner.name}{' '}
+            {participantName ? `& ${participantName} invite` : 'invites'} you to
+          </span>
         )}
       </div>
 
