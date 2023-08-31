@@ -62,4 +62,10 @@ export const Partner: PartnerRelationResolvers = {
   Participants: (_obj, { root }) => {
     return db.partner.findUnique({ where: { id: root?.id } }).Participants()
   },
+  countParticipants: async (_obj, { root }) => {
+    const numParticipants = await db.partner
+      .findUnique({ where: { id: root.id } })
+      .Participants()
+    return numParticipants.length
+  },
 }
