@@ -15262,10 +15262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gsap@file:/Users/amydutton/Dropbox/DOWNLOADS/gsap-member/npm-install-this/gsap-bonus.tgz::locator=web%40workspace%3Aweb":
+"gsap@npm:3.12.2":
   version: 3.12.2
-  resolution: "gsap@file:/Users/amydutton/Dropbox/DOWNLOADS/gsap-member/npm-install-this/gsap-bonus.tgz::locator=web%40workspace%3Aweb"
-  checksum: 662753dc8f009283843ccc5add9f361f69e1a2868e53dcd49555a782c984d2d8e8b3b1efc6ff3eca5b6733db6de69a18ba6444cc68b6ebbacb6d9b11ca0d4b02
+  resolution: "gsap@npm:3.12.2"
+  checksum: 46f3c63065806e7690fd43b0f2097ffd0def663db4f03bf935eac3246bbbbf3189f41e56a51243f493ad087be1d73f58723cbcdbe76b69d6e7cd74d749514cbb
   languageName: node
   linkType: hard
 
@@ -24845,7 +24845,7 @@ __metadata:
     "@redwoodjs/web": 6.1.0
     autoprefixer: ^10.4.15
     framer-motion: ^10.16.0
-    gsap: /Users/amydutton/Dropbox/DOWNLOADS/gsap-member/npm-install-this/gsap-bonus.tgz
+    gsap: 3.12.2
     humanize-string: 2.1.0
     postcss: ^8.4.28
     postcss-loader: ^7.3.3
