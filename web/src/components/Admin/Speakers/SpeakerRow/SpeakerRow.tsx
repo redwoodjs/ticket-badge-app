@@ -80,7 +80,7 @@ const SpeakerRow = ({ speaker }: Props) => {
             <span>{speaker.inPersonCode}</span>
           </CopyButtonWithTooltip>
         </div>
-        <div>24</div>
+        <div>{speaker.countParticipants}</div>
         <div className="flex items-center justify-between">
           <CopyButtonWithTooltip
             textToCopy={`${process.env.REDWOOD_ENV_BASE_URL}/${speaker.slug}`}
