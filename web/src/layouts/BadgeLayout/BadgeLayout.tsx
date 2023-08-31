@@ -28,8 +28,8 @@ const BadgeLayout = ({ children }: BadgeLayoutProps) => {
       </div>
       <Header />
       <div className="relative h-[90%] w-full">
-        <div className="h-full pl-[150px]">{children}</div>
-        <div className="absolute bottom-[100px] right-[300px]">
+        <div className="form-placement">{children}</div>
+        <div className="badge-placement">
           {participantId ? (
             <BadgeCell id={parseInt(participantId)} />
           ) : (
