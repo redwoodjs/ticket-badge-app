@@ -5,22 +5,26 @@ export const standard = defineScenario<Prisma.ParticipantCreateArgs>({
   participant: {
     one: {
       data: {
-        firstName: 'String',
-        lastName: 'String',
-        email: 'String',
-        company: 'String',
-        avatar: 'String',
-        partner: { create: { name: 'String', slug: 'String', logo: 'String' } },
+        email: 'String6984707',
+        partner: {
+          create: {
+            name: 'String',
+            slug: 'String1445706',
+            PartnerType: { create: { name: 'String' } },
+          },
+        },
       },
     },
     two: {
       data: {
-        firstName: 'String',
-        lastName: 'String',
-        email: 'String',
-        company: 'String',
-        avatar: 'String',
-        partner: { create: { name: 'String', slug: 'String', logo: 'String' } },
+        email: 'String577525',
+        partner: {
+          create: {
+            name: 'String',
+            slug: 'String4947947',
+            PartnerType: { create: { name: 'String' } },
+          },
+        },
       },
     },
   },

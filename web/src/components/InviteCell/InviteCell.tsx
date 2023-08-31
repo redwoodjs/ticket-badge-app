@@ -1,11 +1,26 @@
-import type { FindInviteQuery, FindInviteQueryVariables } from 'types/graphql'
-
-import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+import ParticipantForm from '../ParticipantForm/ParticipantForm'
 
 export const QUERY = gql`
-  query FindInviteQuery($id: Int!) {
-    invite: invite(id: $id) {
-      id
+  query InviteParticipantQuery($id: Int!) {
+    participant(id: $id) {
+      avatar
+      name
+      partner {
+        id
+        name
+        slug
+        logo
+        avatar
+        virtualCode
+        virtualDiscount
+        virtualEndDate
+        inPersonCode
+        inPersonDiscount
+        inPersonEndDate
+        PartnerType {
+          name
+        }
+      }
     }
   }
 `
@@ -14,14 +29,16 @@ export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Empty</div>
 
-export const Failure = ({
-  error,
-}: CellFailureProps<FindInviteQueryVariables>) => (
+export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-export const Success = ({
-  invite,
-}: CellSuccessProps<FindInviteQuery, FindInviteQueryVariables>) => {
-  return <div>{JSON.stringify(invite)}</div>
+export const Success = ({ participant }) => {
+  console.log({ participant })
+  return (
+    <ParticipantForm
+      partner={participant.partner}
+      participantName={participant.name}
+    />
+  )
 }

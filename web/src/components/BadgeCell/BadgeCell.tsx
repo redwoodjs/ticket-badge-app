@@ -15,7 +15,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div>Loading...</div>
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => <Badge />
 
 export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
@@ -23,7 +23,7 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ participant }) => {
   const { avatar, name, company } = participant
-  const [firstName, lastName] = SplitFullName(name)
+  const [firstName, lastName] = name ? SplitFullName(name) : ['', '']
 
   return (
     <Badge
