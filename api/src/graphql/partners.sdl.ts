@@ -18,10 +18,10 @@ export const schema = gql`
   }
 
   type Query {
-    partners: [Partner!]! @skipAuth
-    partnersCompaniesOnly: [Partner!]! @skipAuth
-    partnersSpeakersOnly: [Partner!]! @skipAuth
-    partner(id: Int!): Partner @skipAuth
+    partners: [Partner!]! @requireAuth
+    partnersCompaniesOnly: [Partner!]! @requireAuth
+    partnersSpeakersOnly: [Partner!]! @requireAuth
+    partner(id: Int!): Partner @requireAuth
     partnerBySlug(slug: String!): Partner @skipAuth
   }
 
@@ -53,8 +53,8 @@ export const schema = gql`
   }
 
   type Mutation {
-    createPartner(input: CreatePartnerInput!): Partner! @skipAuth
-    updatePartner(id: Int!, input: UpdatePartnerInput!): Partner! @skipAuth
-    deletePartner(id: Int!): Partner! @skipAuth
+    createPartner(input: CreatePartnerInput!): Partner! @requireAuth
+    updatePartner(id: Int!, input: UpdatePartnerInput!): Partner! @requireAuth
+    deletePartner(id: Int!): Partner! @requireAuth
   }
 `
