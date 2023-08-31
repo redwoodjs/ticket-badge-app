@@ -6,6 +6,7 @@ export const QUERY = gql`
   query PartnersQuery {
     partnersSpeakersOnly {
       createdAt
+      countParticipants
       id
       inPersonCode
       inPersonDiscount

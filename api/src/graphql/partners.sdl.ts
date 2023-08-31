@@ -14,6 +14,7 @@ export const schema = gql`
     Participants: [Participant]!
     createdAt: DateTime!
     PartnerType: PartnerType!
+    countParticipants: Int
   }
 
   type Query {

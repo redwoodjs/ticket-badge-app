@@ -73,7 +73,7 @@ const PartnerRow = ({ partner }: Props) => {
             <span>{partner.inPersonCode}</span>
           </CopyButtonWithTooltip>
         </div>
-        <div>24</div>
+        <div>{partner.countParticipants ? partner.countParticipants : 0}</div>
         <div className="flex items-center justify-between">
           <CopyButtonWithTooltip
             textToCopy={`${process.env.REDWOOD_ENV_BASE_URL}/${partner.slug}`}
