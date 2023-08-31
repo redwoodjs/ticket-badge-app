@@ -78,6 +78,11 @@
     @apply mb-7 relative
   }
 
+  .badge-page {
+    background: #B6B6B6 url('/images/spotlight.svg') no-repeat;
+    background-position: -60px -50px;
+  }
+
   .share-button {
     @apply bg-black text-white font-sans leading-[24px] rounded-md py-4 font-bold flex items-center justify-center gap-x-3 w-full hover:bg-gray-900;
   }

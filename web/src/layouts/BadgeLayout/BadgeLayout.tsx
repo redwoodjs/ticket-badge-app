@@ -14,7 +14,7 @@ const BadgeLayout = ({ children }: BadgeLayoutProps) => {
   const [participantId] = useCookie('participantId')
 
   return (
-    <div className="v-screen h-screen bg-[#B6B6B6]" id="page">
+    <div className="v-screen badge-page h-screen" id="page">
       <Toaster />
       <div>
         <a
