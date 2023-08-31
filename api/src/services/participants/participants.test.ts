@@ -34,20 +34,12 @@ describe('participants', () => {
   scenario('creates a participant', async (scenario: StandardScenario) => {
     const result = await createParticipant({
       input: {
-        firstName: 'String',
-        lastName: 'String',
-        email: 'String',
-        company: 'String',
-        avatar: 'String',
+        email: 'String9153117',
         partnerId: scenario.participant.two.partnerId,
       },
     })
 
-    expect(result.firstName).toEqual('String')
-    expect(result.lastName).toEqual('String')
-    expect(result.email).toEqual('String')
-    expect(result.company).toEqual('String')
-    expect(result.avatar).toEqual('String')
+    expect(result.email).toEqual('String9153117')
     expect(result.partnerId).toEqual(scenario.participant.two.partnerId)
   })
 
@@ -57,10 +49,10 @@ describe('participants', () => {
     })) as Participant
     const result = await updateParticipant({
       id: original.id,
-      input: { firstName: 'String2' },
+      input: { email: 'String86574462' },
     })
 
-    expect(result.firstName).toEqual('String2')
+    expect(result.email).toEqual('String86574462')
   })
 
   scenario('deletes a participant', async (scenario: StandardScenario) => {

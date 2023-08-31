@@ -8,7 +8,7 @@ export const schema = gql`
 
   type Query {
     partnerTypes: [PartnerType!]! @requireAuth
-    partnerType(id: Int!): PartnerType @requireAuth
+    partnerType(id: Int!): PartnerType @skipAuth
   }
 
   input CreatePartnerTypeInput {

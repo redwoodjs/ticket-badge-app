@@ -16,23 +16,28 @@ export const schema = gql`
   type Query {
     participants: [Participant!]! @requireAuth
     participant(id: Int!): Participant @skipAuth
+    participant(id: Int!): Participant @skipAuth
   }
 
   input CreateParticipantInput {
-    firstName: String
-    lastName: String
+    name: String
     email: String!
     company: String
     avatar: String
+    githubId: Int
+    location: String
+    twitter: String
     partnerId: Int!
   }
 
   input UpdateParticipantInput {
-    firstName: String
-    lastName: String
+    name: String
     email: String
     company: String
     avatar: String
+    githubId: Int
+    location: String
+    twitter: String
     partnerId: Int
   }
 
