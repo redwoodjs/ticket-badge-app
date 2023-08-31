@@ -32,17 +32,109 @@ const Badge = ({
 
       // CREATE THE TIMELINE
       const CORD_TL = gsap.timeline({ paused: true })
-      CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: -22, duration: 0.2 }))
-      CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: 12, duration: 0.2 }))
-      CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: -5, duration: 0.2 }))
-      CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: 3, duration: 0.2 }))
-      CORD_TL.add(gsap.to(BADGE, { x: 0, y: 0, rotation: 0, duration: 0.2 }))
+      CORD_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: -22,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      CORD_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: 12,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      CORD_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: -5,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      CORD_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: 3,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      CORD_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: 0,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+
+      const WIGGLE_TL = gsap.timeline({ paused: true })
+      WIGGLE_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: -2,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      WIGGLE_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: 2,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      WIGGLE_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: -1,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      WIGGLE_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: 1,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
+      WIGGLE_TL.add(
+        gsap.to(BADGE, {
+          x: 0,
+          y: 0,
+          rotation: 0,
+          duration: 0.2,
+          transformOrigin: 'center top',
+        })
+      )
 
       let startX = 0
       let startY = 0
 
       const ENDX = myCordFront.current.getAttribute('x2')
       const ENDY = myCordFront.current.getAttribute('y2')
+
+      // TIMED FUNCTION TO UPDATE THE CORDS
+      setInterval(() => {
+        WIGGLE_TL.restart()
+      }, 10000)
 
       // CREATE THE DRAGGABLE
       myDraggable.current = Draggable.create(BADGE, {
