@@ -27,7 +27,9 @@
   },
   "packageManager": "yarn@3.6.1",
   "scripts": {
-    "build:icons": "tsx ./scripts/build-icons.mts"
+    "build:icons": "tsx ./scripts/build-icons.mts",
+    "start": "yarn rw dev --forward=\"--allowed-hosts all\"",
+    "lt": "npx localtunnel --port 8910 --subdomain rw-partner-badges"
   },
   "dependencies": {
     "glob": "^10.3.3",

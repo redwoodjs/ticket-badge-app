@@ -1,3 +1,5 @@
+import { MetaTags } from '@redwoodjs/web'
+
 import { SplitFullName } from 'src/helpers/NameHelpers'
 
 import Badge from '../Badge/Badge'
@@ -26,11 +28,17 @@ export const Success = ({ participant }) => {
   const [firstName, lastName] = name ? SplitFullName(name) : ['', '']
 
   return (
-    <Badge
-      avatar={avatar}
-      firstName={firstName}
-      lastName={lastName}
-      company={company}
-    />
+    <>
+      <MetaTags
+        title={`Welcome to the conference ${firstName}`}
+        description="Badge page"
+      />
+      <Badge
+        avatar={avatar}
+        firstName={firstName}
+        lastName={lastName}
+        company={company}
+      />
+    </>
   )
 }

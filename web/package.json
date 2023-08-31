@@ -8,6 +8,7 @@
     ]
   },
   "dependencies": {
+    "@apollo/experimental-nextjs-app-support": "0.0.0-commit-5141fa5",
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
     "@gsap/member": "^3.12.2",
