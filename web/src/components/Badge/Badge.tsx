@@ -3,7 +3,19 @@ import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 
-const Badge = ({ avatar, firstName, lastName, company }) => {
+interface Props {
+  avatar?: string
+  firstName?: string
+  lastName?: string
+  company?: string
+}
+
+const Badge = ({
+  avatar = '',
+  firstName = '',
+  lastName = '',
+  company = '',
+}: Props) => {
   const comp = useRef()
   const badgeRef = useRef(null)
   const myDraggable = useRef(null)
@@ -163,7 +175,7 @@ const Badge = ({ avatar, firstName, lastName, company }) => {
             <img
               src={avatar}
               alt={`${firstName} ${lastName}`}
-              className="float-right h-[120px] w-[120px] rounded-full border-2 border-white"
+              className="float-right mt-2 h-[120px] w-[120px] rounded-full border-2 border-white"
             />
           )}
         </div>

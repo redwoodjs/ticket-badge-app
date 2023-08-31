@@ -1,7 +1,9 @@
 import { Toaster } from '@redwoodjs/web/toast'
 
 import Badge from 'src/components/Badge/Badge'
+import BadgeCell from 'src/components/BadgeCell'
 import Header from 'src/components/Header/Header'
+import useCookie from 'src/hooks/useCookie'
 import { Constants } from 'src/utils/Constants'
 
 type BadgeLayoutProps = {
@@ -9,6 +11,8 @@ type BadgeLayoutProps = {
 }
 
 const BadgeLayout = ({ children }: BadgeLayoutProps) => {
+  const [participantId] = useCookie('participantId')
+
   return (
     <div className="v-screen h-screen bg-[#B6B6B6]" id="page">
       <Toaster />
@@ -26,7 +30,11 @@ const BadgeLayout = ({ children }: BadgeLayoutProps) => {
       <div className="relative h-[90%] w-full">
         <div className="h-full pl-[150px]">{children}</div>
         <div className="absolute bottom-[100px] right-[300px]">
-          <Badge />
+          {participantId ? (
+            <BadgeCell id={parseInt(participantId)} />
+          ) : (
+            <Badge />
+          )}
         </div>
       </div>
     </div>

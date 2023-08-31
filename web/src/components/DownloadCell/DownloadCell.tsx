@@ -1,5 +1,7 @@
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
+import { SplitFullName } from 'src/helpers/NameHelpers'
+
 export const QUERY = gql`
   query FindParticipant($id: Int!) {
     participant(id: $id) {
@@ -21,9 +23,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ participant }: CellSuccessProps) => {
   const { avatar, name, company } = participant
-  const nameArray = name?.split(' ') || []
-  const firstName = nameArray[0]
-  const lastName = name.replace(firstName, '')
+  const [firstName, lastName] = SplitFullName(name)
 
   return (
     <div className="center bg-[#170E13]">
