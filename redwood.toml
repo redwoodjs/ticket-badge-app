@@ -12,7 +12,9 @@
   includeEnvironmentVariables = [
     # Add any ENV vars that should be available to the web side to this array
     # See https://redwoodjs.com/docs/environment-variables#web
-    "GITHUB_OAUTH_CLIENT_ID", "GITHUB_OAUTH_REDIRECT_URI", "GITHUB_OAUTH_SCOPES"
+    "GITHUB_OAUTH_CLIENT_ID",
+    "GITHUB_OAUTH_REDIRECT_URI",
+    "GITHUB_OAUTH_SCOPES",
   ]
 [api]
   port = 8911
