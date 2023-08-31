@@ -104,6 +104,10 @@
     @apply text-steelBlue;
   }
 
+  .users-table {
+    @apply grid grid-cols-[100px_1fr_200px] gap-x-10 items-center;
+  }
+
   .speakers-table {
     @apply grid grid-cols-[60px_1fr_150px_150px_120px_200px] gap-x-10 items-center;
   }
