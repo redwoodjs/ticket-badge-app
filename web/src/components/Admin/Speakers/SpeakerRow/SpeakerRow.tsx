@@ -52,11 +52,13 @@ const SpeakerRow = ({ speaker }: Props) => {
     <>
       <div className="speakers-table min-h-[68px] border-b-1 border-b-gainsboro">
         <div>
-          <img
-            src={speaker.avatar}
-            alt={speaker.name}
-            className="max-h-[60px]"
-          />
+          {speaker.avatar && (
+            <img
+              src={speaker.avatar}
+              alt={speaker.name}
+              className="max-h-[60px]"
+            />
+          )}
         </div>
         <div>
           <a
