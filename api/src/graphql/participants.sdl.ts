@@ -14,7 +14,7 @@ export const schema = gql`
   }
 
   type Query {
-    participants: [Participant!]! @skipAuth
+    participants: [Participant!]! @requireAuth
     participant(id: Int!): Participant @skipAuth
   }
 
@@ -39,7 +39,7 @@ export const schema = gql`
   type Mutation {
     createParticipant(input: CreateParticipantInput!): Participant! @skipAuth
     updateParticipant(id: Int!, input: UpdateParticipantInput!): Participant!
-      @skipAuth
-    deleteParticipant(id: Int!): Participant! @skipAuth
+      @requireAuth
+    deleteParticipant(id: Int!): Participant! @requireAuth
   }
 `
