@@ -137,7 +137,7 @@ const Badge = ({ avatar, firstName, lastName, company }) => {
         />
         <div className="relative">
           <img
-            src="/images/tag.png"
+            src={avatar || name ? '/images/tag.png' : '/images/tag--blank.png'}
             alt="conference badge"
             className="pointer-events-none relative z-card h-[537px] w-[351px]"
           />

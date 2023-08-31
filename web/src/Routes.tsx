@@ -17,6 +17,7 @@ import BadgeLayout from './layouts/BadgeLayout/BadgeLayout'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+      <Route path="/download/{id:Int}" page={DownloadPage} name="download" />
       <Set wrap={AdminLayout}>
         <Route path="/admin/speakers" page={AdminSpeakersPage} name="speakers" />
         <Route path="/admin/dashboard" page={AdminDashboardPage} name="dashboard" />
@@ -30,6 +31,7 @@ const Routes = () => {
         <Route path="/reset-password" page={AuthResetPasswordPage} name="resetPassword" />
       </Set>
       <Set wrap={BadgeLayout}>
+        <Route path="/invite/{id:Int}" page={InvitePage} name="invite" />
         <Route path="/share" page={SharePage} name="share" />
         <Route path="/customize" page={CustomizeTicketPage} name="customizeTicket" />
         <Route path="/{slug:String}" page={HomePage} name="partner" />
