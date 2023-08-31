@@ -33,11 +33,6 @@ const AdminHeader = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={routes.users()} activeClassName="active-nav">
-              Users
-            </NavLink>
-          </li>
-          <li>
             <button onClick={handleLogout}>Logout</button>
           </li>
         </ul>
