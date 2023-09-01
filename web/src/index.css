@@ -82,6 +82,12 @@
     @apply absolute bottom-[100px] right-[10%] xl:right-[200px] 2xl:right-[300px]
   }
 
+  @media (min-height: 888px) {
+    .form-placement {
+      @apply bottom-auto -top-2
+    }
+  }
+
   .field {
     @apply mb-7 relative
   }

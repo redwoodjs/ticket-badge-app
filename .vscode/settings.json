@@ -22,5 +22,10 @@
     "Roboto",
     "signup",
     "Slideout"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#163415",
+    "titleBar.activeBackground": "#1E491D",
+    "titleBar.activeForeground": "#F7FCF7"
+  }
 }
