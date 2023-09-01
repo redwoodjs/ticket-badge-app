@@ -129,7 +129,7 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
         </h2>
         <Form formMethods={formMethods} onSubmit={onSubmit}>
           <FormError />
-          <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-[#D3D3D3] px-9 pb-7 pt-10">
+          <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-gray-100 px-9 pb-7 pt-10">
             <Label name="email" htmlFor="email">
               Enter Your Email Address
             </Label>

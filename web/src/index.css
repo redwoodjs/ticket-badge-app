@@ -79,8 +79,7 @@
   }
 
   body:has(.badge-page) {
-    background: #B6B6B6 url('/images/spotlight.svg') no-repeat;
-    background-position: -60px -50px;
+    @apply bg-white
   }
 
   .share-button {
