@@ -128,9 +128,6 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
           </a>
         </h2>
         <Form formMethods={formMethods} onSubmit={onSubmit}>
-          <div className="mb-4 font-bold text-red-500">
-            <FormError error={error} />
-          </div>
           <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-gray-100 px-9 pb-7 pt-10">
             <Label name="email" htmlFor="email">
               Enter Your Email Address
@@ -142,6 +139,9 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
               validation={{ required: true }}
             />
             <FieldError name="email" className="error-message" />
+            <div className="mb-4 font-bold text-red-500">
+              <FormError error={error} />
+            </div>
             <HiddenField name="partnerId" value={partner.id} />
             <button
               className="w-full rounded-lg bg-steelBlue py-3 font-wide text-white hover:bg-darkSlateGray"
