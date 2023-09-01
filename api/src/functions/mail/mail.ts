@@ -12,7 +12,7 @@ export const handler = async (event: APIGatewayEvent, _context: Context) => {
       content: 'This is a test email.',
     }),
     {
-      to: 'joshgmwalker@gmail.com',
+      to: 'josh@example.com',
       from: 'testing@redwoodjs.com',
       subject: 'Test email',
     }
