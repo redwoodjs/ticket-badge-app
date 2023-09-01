@@ -22,3 +22,6 @@
   open = true
 [notifications]
   versionUpdates = ["latest"]
+
+[experimental.studio]
+  enabled = true
