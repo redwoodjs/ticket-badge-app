@@ -39,8 +39,11 @@ const CustomizeTicketPage = () => {
 
       <main className="page flex h-full items-center">
         <div>
-          <h1 className="page-title">You&apos;re In!</h1>
-          <h2 className="subheading mb-12 text-chestnutRose">
+          <h1 className="page-title mb-8">You&apos;re In!</h1>
+          <p className="mb-[72px] text-xl">
+            Please check you email for a registration link.
+          </p>
+          <h2 className="subheading mb-5 text-chestnutRose">
             Now Make it Yours
           </h2>
           <a
