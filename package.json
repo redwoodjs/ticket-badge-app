@@ -7,10 +7,10 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/auth-dbauth-setup": "7.0.0-canary.267",
-    "@redwoodjs/cli-storybook": "7.0.0-canary.267",
-    "@redwoodjs/core": "7.0.0-canary.267",
-    "@redwoodjs/studio": "7.0.0-canary.267",
+    "@redwoodjs/auth-dbauth-setup": "7.0.0-canary.269",
+    "@redwoodjs/cli-storybook": "7.0.0-canary.269",
+    "@redwoodjs/core": "7.0.0-canary.269",
+    "@redwoodjs/studio": "7.0.0-canary.269",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
