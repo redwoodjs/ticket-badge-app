@@ -109,15 +109,6 @@ const LoginPage = () => {
           <Icon id="check" />
           Login
         </Submit>
-
-        <div className="rw-text-center w-full">
-          <Link
-            to={routes.signup()}
-            className="mx-auto w-full border-b-1 border-b-black text-sm hover:border-b-transparent"
-          >
-            Sign Up
-          </Link>
-        </div>
       </Form>
     </>
   )
