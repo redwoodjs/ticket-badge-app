@@ -5,6 +5,8 @@ export type IconName =
 	| "check"
 	| "close"
 	| "copy"
+	| "discord"
+	| "discourse"
 	| "download"
 	| "edit"
 	| "eye"
@@ -14,5 +16,7 @@ export type IconName =
 	| "plus"
 	| "show"
 	| "trash"
+	| "twitter-alt"
 	| "twitter"
-	| "upload";
+	| "upload"
+	| "youtube";
