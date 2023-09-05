@@ -33,40 +33,40 @@ const CREATE_PARTICIPANT_MUTATION = gql`
 
 const ParticipantForm = ({ partner, participantName = '' }: Props) => {
   const formMethods = useForm()
-  // const [participantIdCookie, updateParticipantIdCookie] =
-  //   useCookie('participantId')
-  // const [_, updateParticipantEmailCookie] = useCookie('participantEmail')
+  const [participantIdCookie, updateParticipantIdCookie] =
+    useCookie('participantId')
+  const [_, updateParticipantEmailCookie] = useCookie('participantEmail')
 
-  // // check to see if a cookie exists
-  // useEffect(() => {
-  //   if (participantIdCookie) {
-  //     navigate(routes.customizeTicket())
-  //   }
-  // }, [participantIdCookie])
+  // check to see if a cookie exists
+  useEffect(() => {
+    if (participantIdCookie) {
+      navigate(routes.customizeTicket())
+    }
+  }, [participantIdCookie])
 
-  // const [createParticipant, { loading, error }] = useMutation(
-  //   CREATE_PARTICIPANT_MUTATION,
-  //   {
-  //     onCompleted: (data) => {
-  //       if (error) {
-  //         console.error(error)
-  //         toast.error(error.message)
-  //       } else {
-  //         // set a cookie with the participant id inside
-  //         updateParticipantIdCookie(data.createParticipant.id, 30)
-  //         updateParticipantEmailCookie(data.createParticipant.email, 30)
-  //       }
-  //     },
-  //   }
-  // )
+  const [createParticipant, { loading, error }] = useMutation(
+    CREATE_PARTICIPANT_MUTATION,
+    {
+      onCompleted: (data) => {
+        if (error) {
+          console.error(error)
+          toast.error(error.message)
+        } else {
+          // set a cookie with the participant id inside
+          updateParticipantIdCookie(data.createParticipant.id, 30)
+          updateParticipantEmailCookie(data.createParticipant.email, 30)
+        }
+      },
+    }
+  )
 
   const onSubmit = (data) => {
-    // createParticipant({
-    //   variables: {
-    //     email: data.email,
-    //     partnerId: parseInt(data.partnerId),
-    //   },
-    // })
+    createParticipant({
+      variables: {
+        email: data.email,
+        partnerId: parseInt(data.partnerId),
+      },
+    })
     formMethods.reset()
   }
 
@@ -143,7 +143,7 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
             <HiddenField name="partnerId" value={partner.id} />
             <button
               className="w-full rounded-lg bg-steelBlue py-3 font-wide text-white hover:bg-darkSlateGray"
-              // disabled={loading}
+              disabled={loading}
             >
               Yes, please!
             </button>
