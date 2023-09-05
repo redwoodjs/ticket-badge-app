@@ -72,14 +72,10 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
 
   return (
     <>
-      <div className="mb-6 flex items-center gap-5 whitespace-nowrap text-center font-wide uppercase">
+      <div className="mb-12 flex items-center gap-8 whitespace-nowrap text-center font-wide text-xl uppercase">
         {partner.logo && (
           <>
-            <img
-              src={partner.logo}
-              alt={partner.name}
-              className="max-h-[60px]"
-            />
+            <img src={partner.logo} alt={partner.name} className="h-[80px]" />
             {participantName ? `& ${participantName} invite` : 'invites'} you to
           </>
         )}
@@ -104,32 +100,13 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
 
       <div>
         <h1 className="page-title mb-5">
-          Register &<br /> Get your{' '}
-          <span className="text-chestnutRose">Free</span>
+          Register & Get your
           <br />
-          Virtual Ticket
+          <span className="text-chestnutRose">Free</span> Virtual Ticket
         </h1>
-        <h2 className="subheading mb-5">September 27 - 28, 2023</h2>
-        <h2 className="subheading mb-8">
-          <a
-            href="https://redwoodjsconf.com"
-            className="text-darkSlateGray"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="text-steelBlue">or</span> use{' '}
-            <span className="text-chestnutRose">{partner.inPersonCode}</span>{' '}
-            for{' '}
-            <span className="whitespace-nowrap text-chestnutRose">
-              {partner.inPersonDiscount}% off
-            </span>
-            <br />
-            an <span className="whitespace-nowrap">in-person ticket</span>
-          </a>
-        </h2>
-        <Form formMethods={formMethods} onSubmit={onSubmit}>
-          <FormError />
-          <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-[#D3D3D3] px-9 pb-7 pt-10">
+        <h2 className="subheading mb-7">September 27 - 28, 2023</h2>
+        <Form formMethods={formMethods} onSubmit={onSubmit} className="mb-16">
+          <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-gray-200 px-9 pb-7 pt-10">
             <Label name="email" htmlFor="email">
               Enter Your Email Address
             </Label>
@@ -140,6 +117,11 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
               validation={{ required: true }}
             />
             <FieldError name="email" className="error-message" />
+            {error && (
+              <div className="mb-4 font-bold text-red-500">
+                <FormError error={error} />
+              </div>
+            )}
             <HiddenField name="partnerId" value={partner.id} />
             <button
               className="w-full rounded-lg bg-steelBlue py-3 font-wide text-white hover:bg-darkSlateGray"
@@ -149,6 +131,26 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
             </button>
           </div>
         </Form>
+
+        {partner.inPersonUrl && (
+          <div className="px-10">
+            <h2 className="subheading mb-8 ">
+              <span className="text-steelBlue">or</span> Use{' '}
+              <span className="text-chestnutRose">{partner.inPersonCode}</span>{' '}
+              for{' '}
+              <span className="whitespace-nowrap text-chestnutRose">
+                {partner.inPersonDiscount}% off
+              </span>{' '}
+              an in-person ticket:{' '}
+              <a
+                href={partner.inPersonUrl}
+                className="my-4 block rounded-md border-2 border-steelBlue py-3 text-center text-base hover:bg-steelBlue hover:text-white"
+              >
+                register here
+              </a>
+            </h2>
+          </div>
+        )}
       </div>
     </>
   )
