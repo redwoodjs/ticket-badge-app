@@ -1,5 +1,3 @@
-import { Toaster } from '@redwoodjs/web/toast'
-
 import Badge from 'src/components/Badge/Badge'
 import BadgeCell from 'src/components/BadgeCell'
 import Header from 'src/components/Header/Header'
@@ -15,7 +13,6 @@ const BadgeLayout = ({ children }: BadgeLayoutProps) => {
 
   return (
     <div className="v-screen badge-page h-screen" id="page">
-      <Toaster />
       <div>
         <a
           href={Constants.GITHUB_URL}

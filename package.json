@@ -7,10 +7,10 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/auth-dbauth-setup": "7.0.0-canary.267",
-    "@redwoodjs/cli-storybook": "7.0.0-canary.267",
-    "@redwoodjs/core": "7.0.0-canary.267",
-    "@redwoodjs/studio": "7.0.0-canary.267",
+    "@redwoodjs/auth-dbauth-setup": "7.0.0-canary.285",
+    "@redwoodjs/cli-storybook": "7.0.0-canary.285",
+    "@redwoodjs/core": "7.0.0-canary.285",
+    "@redwoodjs/studio": "7.0.0-canary.285",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
@@ -27,7 +27,9 @@
   },
   "packageManager": "yarn@3.6.1",
   "scripts": {
-    "build:icons": "tsx ./scripts/build-icons.mts"
+    "build:icons": "tsx ./scripts/build-icons.mts",
+    "start": "yarn rw dev --forward=\"--allowed-hosts all\"",
+    "lt": "npx localtunnel --port 8910 --subdomain rw-partner-badges"
   },
   "dependencies": {
     "glob": "^10.3.3",

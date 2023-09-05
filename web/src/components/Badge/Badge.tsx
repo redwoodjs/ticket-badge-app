@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 
 import { gsap } from 'gsap'
-import { Draggable } from 'gsap/Draggable'
+import { Draggable } from 'gsap/dist/Draggable'
 
 interface Props {
   avatar?: string
@@ -209,7 +209,7 @@ const Badge = ({
         viewBox="0 0 350 150"
         width="350"
         height="150"
-        preserveAspectRatio="XMinYMin"
+        preserveAspectRatio="xMinYMin"
         style={{ overflow: 'visible' }}
       >
         <line
@@ -241,7 +241,11 @@ const Badge = ({
         />
         <div className="relative">
           <img
-            src={avatar || name ? '/images/tag.png' : '/images/tag--blank.png'}
+            src={
+              avatar || firstName || lastName
+                ? '/images/tag.png'
+                : '/images/tag--blank.png'
+            }
             alt="conference badge"
             className="pointer-events-none relative z-card h-[537px] w-[351px]"
           />
