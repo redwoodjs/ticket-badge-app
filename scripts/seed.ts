@@ -474,20 +474,20 @@ export default async () => {
     // the same algorithm that dbAuth uses internally:
     //
 
-  //   const users = [{ email: 'amy@redwoodjs.com', password: 'password' }]
+    // const users = [{ email: 'amy@redwoodjs.com', password: 'password' }]
 
-  //   for (const user of users) {
-  //     const [hashedPassword, salt] = hashPassword(user.password)
-  //     await db.user.create({
-  //       data: {
-  //         email: user.email,
-  //         hashedPassword,
-  //         salt,
-  //       },
-  //     })
-  //   }
-  // } catch (error) {
-  //   console.warn('Please define your seed data.')
-  //   console.error(error)
-  // }
+    // for (const user of users) {
+    //   const [hashedPassword, salt] = hashPassword(user.password)
+    //   await db.user.create({
+    //     data: {
+    //       email: user.email,
+    //       hashedPassword,
+    //       salt,
+    //     },
+    //   })
+    // }
+  } catch (error) {
+    console.warn('Please define your seed data.')
+    console.error(error)
+  }
 }
