@@ -3,7 +3,7 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 import SpeakerRow from '../SpeakerRow/SpeakerRow'
 
 export const QUERY = gql`
-  query PartnersQuery {
+  query SpeakersQuery {
     partnersSpeakersOnly {
       createdAt
       countParticipants
@@ -11,6 +11,7 @@ export const QUERY = gql`
       inPersonCode
       inPersonDiscount
       inPersonEndDate
+      inPersonUrl
       avatar
       name
       slug

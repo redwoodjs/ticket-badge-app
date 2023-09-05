@@ -6,15 +6,14 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import Icon from 'src/components/Icon/Icon'
-import { Constants } from 'src/utils/Constants'
 
 import ButtonWithToolTip from '../../ButtonWithTooltip/ButtonWithTooltip'
 import CopyButtonWithTooltip from '../../CopyButtonWithTooltip/CopyButtonWithTooltip'
 import LinkWithToolTip from '../../LinkWithTooltip/LinkWithTooltip'
 import Modal from '../../Modal/Modal'
+import { DELETE_PARTNER_MUTATION } from '../../Partners/PartnerForm/PartnerMutations'
 import SlideOut from '../../SlideOut/SlideOut'
 import SpeakerForm from '../SpeakerForm/SpeakerForm'
-import { DELETE_SPEAKER_MUTATION } from '../SpeakerForm/SpeakerMutations'
 import { QUERY as SpeakersQuery } from '../SpeakersCell/SpeakersCell'
 
 interface Props {
@@ -26,7 +25,7 @@ const SpeakerRow = ({ speaker }: Props) => {
   const [isConfirmDeleteShowing, setIsConfirmDeleteShowing] = useState(false)
 
   const [deleteSpeaker, deleteSpeakerStatus] = useMutation(
-    DELETE_SPEAKER_MUTATION,
+    DELETE_PARTNER_MUTATION,
     {
       onCompleted: () => {
         toast.success('Speaker deleted!')

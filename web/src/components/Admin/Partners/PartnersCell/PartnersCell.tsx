@@ -13,6 +13,7 @@ export const QUERY = gql`
       inPersonCode
       inPersonDiscount
       inPersonEndDate
+      inPersonUrl
       logo
       name
       slug

@@ -131,23 +131,26 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
             </button>
           </div>
         </Form>
-        <div className="px-10">
-          <h2 className="subheading mb-8 ">
-            <span className="text-steelBlue">or</span> Use{' '}
-            <span className="text-chestnutRose">{partner.inPersonCode}</span>{' '}
-            for{' '}
-            <span className="whitespace-nowrap text-chestnutRose">
-              {partner.inPersonDiscount}% off
-            </span>{' '}
-            an in-person ticket:{' '}
-            <a
-              href="#"
-              className="my-4 block rounded-md border-2 border-steelBlue py-3 text-center text-base hover:bg-steelBlue hover:text-white"
-            >
-              register here
-            </a>
-          </h2>
-        </div>
+
+        {partner.inPersonUrl && (
+          <div className="px-10">
+            <h2 className="subheading mb-8 ">
+              <span className="text-steelBlue">or</span> Use{' '}
+              <span className="text-chestnutRose">{partner.inPersonCode}</span>{' '}
+              for{' '}
+              <span className="whitespace-nowrap text-chestnutRose">
+                {partner.inPersonDiscount}% off
+              </span>{' '}
+              an in-person ticket:{' '}
+              <a
+                href={partner.inPersonUrl}
+                className="my-4 block rounded-md border-2 border-steelBlue py-3 text-center text-base hover:bg-steelBlue hover:text-white"
+              >
+                register here
+              </a>
+            </h2>
+          </div>
+        )}
       </div>
     </>
   )

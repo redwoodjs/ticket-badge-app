@@ -87,7 +87,7 @@ const PartnerForm = ({ partner, state, onSubmit = () => {} }: Props) => {
 
     // add speaker
     if (state === 'add') {
-      createPartner({ variables: { ...data, logo } })
+      createPartner({ variables: { ...data, partnerTypeId: 2, logo } })
     }
     // edit speaker
     else {
@@ -209,6 +209,20 @@ const PartnerForm = ({ partner, state, onSubmit = () => {} }: Props) => {
           <TextField
             name="inPersonCode"
             defaultValue={partner?.inPersonCode && partner.inPersonCode}
+          />
+        </div>
+
+        <div className="field">
+          <Label
+            name="inPersonUrl"
+            htmlFor="inPersonUrl"
+            className="text-white"
+          >
+            In Person URL
+          </Label>
+          <TextField
+            name="inPersonUrl"
+            defaultValue={partner?.inPersonUrl && partner.inPersonUrl}
           />
         </div>
 

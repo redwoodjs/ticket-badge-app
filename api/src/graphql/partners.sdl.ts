@@ -11,6 +11,7 @@ export const schema = gql`
     inPersonCode: String
     inPersonDiscount: Int
     inPersonEndDate: DateTime
+    inPersonUrl: String
     Participants: [Participant]!
     createdAt: DateTime!
     PartnerType: PartnerType!
@@ -34,6 +35,7 @@ export const schema = gql`
     virtualDiscount: Int
     virtualEndDate: DateTime
     inPersonCode: String
+    inPersonUrl: String
     inPersonDiscount: Int
     inPersonEndDate: DateTime
     partnerTypeId: Int!
@@ -48,6 +50,7 @@ export const schema = gql`
     virtualDiscount: Int
     virtualEndDate: DateTime
     inPersonCode: String
+    inPersonUrl: String
     inPersonDiscount: Int
     inPersonEndDate: DateTime
   }

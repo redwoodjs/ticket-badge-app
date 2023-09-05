@@ -1,5 +1,3 @@
-// TODO: Duplicate mutation names inside SpeakerMutations.ts
-
 export const CREATE_PARTNER_MUTATION = gql`
   mutation createPartnerMutation(
     $name: String!
@@ -10,8 +8,10 @@ export const CREATE_PARTNER_MUTATION = gql`
     $virtualDiscount: Int
     $virtualEndDate: DateTime
     $inPersonCode: String
+    $inPersonUrl: String
     $inPersonDiscount: Int
     $inPersonEndDate: DateTime
+    $partnerTypeId: Int!
   ) {
     createPartner(
       input: {
@@ -24,8 +24,9 @@ export const CREATE_PARTNER_MUTATION = gql`
         virtualEndDate: $virtualEndDate
         inPersonCode: $inPersonCode
         inPersonEndDate: $inPersonEndDate
+        inPersonUrl: $inPersonUrl
         inPersonDiscount: $inPersonDiscount
-        partnerTypeId: 2 # company
+        partnerTypeId: $partnerTypeId
       }
     ) {
       id

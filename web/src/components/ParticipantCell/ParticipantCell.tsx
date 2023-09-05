@@ -16,6 +16,7 @@ export const QUERY = gql`
       virtualDiscount
       virtualEndDate
       inPersonCode
+      inPersonUrl
       inPersonDiscount
       inPersonEndDate
     }
