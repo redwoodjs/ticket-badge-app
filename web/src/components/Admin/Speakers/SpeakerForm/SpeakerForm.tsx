@@ -20,12 +20,11 @@ import Icon from 'src/components/Icon/Icon'
 import { today } from 'src/helpers/DateHelpers'
 
 import UploadField from '../../Form/Upload/UploadField'
-
 import {
-  CREATE_SPEAKER_MUTATION,
-  DELETE_SPEAKER_MUTATION,
-  UPDATE_SPEAKER_MUTATION,
-} from './SpeakerMutations'
+  CREATE_PARTNER_MUTATION,
+  DELETE_PARTNER_MUTATION,
+  UPDATE_PARTNER_MUTATION,
+} from '../../Partners/PartnerForm/PartnerMutations'
 
 interface Props {
   state: 'add' | 'edit'
@@ -37,7 +36,7 @@ const SpeakerForm = ({ speaker, state, onSubmit }: Props) => {
   const [avatar, setAvatar] = useState(speaker?.avatar || '')
 
   const [createSpeaker, createSpeakerStatus] = useMutation(
-    CREATE_SPEAKER_MUTATION,
+    CREATE_PARTNER_MUTATION,
     {
       onCompleted: () => {
         if (createSpeakerStatus.error) {
@@ -51,7 +50,7 @@ const SpeakerForm = ({ speaker, state, onSubmit }: Props) => {
   )
 
   const [updateSpeaker, updateSpeakerStatus] = useMutation(
-    UPDATE_SPEAKER_MUTATION,
+    UPDATE_PARTNER_MUTATION,
     {
       onCompleted: () => {
         if (updateSpeakerStatus.error) {
@@ -65,7 +64,7 @@ const SpeakerForm = ({ speaker, state, onSubmit }: Props) => {
   )
 
   const [deleteSpeaker, deleteSpeakerStatus] = useMutation(
-    DELETE_SPEAKER_MUTATION,
+    DELETE_PARTNER_MUTATION,
     {
       onCompleted: () => {
         if (deleteSpeakerStatus.error) {
@@ -83,7 +82,7 @@ const SpeakerForm = ({ speaker, state, onSubmit }: Props) => {
 
     // add a speaker (partner)
     if (state === 'add') {
-      createSpeaker({ variables: { avatar, ...data } })
+      createSpeaker({ variables: { avatar, partnerTypeId: 1, ...data } })
     } // edit speaker (partner)
     else {
       const { id, ...rest } = data
@@ -206,6 +205,20 @@ const SpeakerForm = ({ speaker, state, onSubmit }: Props) => {
             <TextField
               name="inPersonCode"
               defaultValue={speaker?.inPersonCode && speaker.inPersonCode}
+            />
+          </div>
+
+          <div className="field">
+            <Label
+              name="inPersonUrl"
+              htmlFor="inPersonUrl"
+              className="text-white"
+            >
+              In Person Url
+            </Label>
+            <TextField
+              name="inPersonUrl"
+              defaultValue={speaker?.inPersonUrl && speaker.inPersonUrl}
             />
           </div>
 

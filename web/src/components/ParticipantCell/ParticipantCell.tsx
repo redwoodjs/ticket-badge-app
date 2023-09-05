@@ -16,13 +16,14 @@ export const QUERY = gql`
       virtualDiscount
       virtualEndDate
       inPersonCode
+      inPersonUrl
       inPersonDiscount
       inPersonEndDate
     }
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div />
 
 export const Empty = () => <div>Partner not found</div>
 

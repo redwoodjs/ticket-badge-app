@@ -67,7 +67,7 @@
   }
 
   .page-title {
-    @apply font-condensed text-[112px] leading-[0.9] text-darkSlateGray;
+    @apply font-condensed text-[84px] leading-[0.9] text-darkSlateGray;
   }
 
   .subheading {
@@ -79,7 +79,7 @@
   }
 
   body:has(.badge-page) {
-    background: #B6B6B6 url('/images/spotlight.svg') no-repeat;
+    background: #f0f0f0 url('/images/spotlight.svg') no-repeat;
     background-position: -60px -50px;
   }
 

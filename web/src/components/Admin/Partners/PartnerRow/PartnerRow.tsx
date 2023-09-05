@@ -14,7 +14,6 @@ import { DELETE_PARTNER_MUTATION } from 'src/components/Admin/Partners/PartnerFo
 import { QUERY as PartnersQuery } from 'src/components/Admin/Partners/PartnersCell/PartnersCell'
 import SlideOut from 'src/components/Admin/SlideOut/SlideOut'
 import Icon from 'src/components/Icon/Icon'
-import { Constants } from 'src/utils/Constants'
 
 interface Props {
   partner: Partial<Omit<Partner, 'Participants'>>
