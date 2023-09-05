@@ -32,6 +32,7 @@ model Partner {
   inPersonCode     String?
   inPersonDiscount Int?
   inPersonEndDate  DateTime?
+  inPersonUrl      String?
   Participants     Participant[]
   createdAt        DateTime      @default(now())
   PartnerType      PartnerType   @relation(fields: [partnerTypeId], references: [id])
