@@ -9,6 +9,8 @@ import { RedwoodError } from '@redwoodjs/api'
 
 import { db } from 'src/lib/db'
 import { logger } from 'src/lib/logger'
+import { mailer } from 'src/lib/mailer'
+import { TicketEmail } from 'src/mail/TicketEmail'
 
 export const participants: QueryResolvers['participants'] = () => {
   return db.participant.findMany()
@@ -23,9 +25,44 @@ export const participant: QueryResolvers['participant'] = ({ id }) => {
 export const createParticipant: MutationResolvers['createParticipant'] =
   async ({ input }) => {
     try {
-      return await db.participant.create({
+      const newParticipant = await db.participant.create({
         data: input,
+        select: {
+          id: true,
+          email: true,
+          partner: {
+            select: {
+              inPersonCode: true,
+              inPersonDiscount: true,
+              inPersonUrl: true,
+            },
+          },
+        },
       })
+
+      await mailer.send(
+        TicketEmail({
+          preview:
+            "You're in! Confirming your virtual spot at RedwoodJS Conference.Get ready for talks from Tom Preston- Werner on RedwoodJS, deep dives on Apollo and GraphQL, and more.Your ticket inside!",
+          participantID: newParticipant.id,
+          partnerInPersonCode: newParticipant.partner.inPersonCode,
+          partnerInPersonDiscount: newParticipant.partner.inPersonDiscount,
+          partnerInPersonUrl: newParticipant.partner.inPersonUrl,
+        }),
+        {
+          to: input.email,
+          from: 'conference@redwoodjs.com',
+          subject:
+            "🎟️ Confirmation: You're Registered for the RedwoodJS Conference!",
+          attachments: [
+            {
+              filename: `${process.env.REDWOOD_ENV_BASE_URL}/files/RedwoodJSConference2023.ics`,
+            },
+          ],
+        }
+      )
+
+      return newParticipant
     } catch (e) {
       logger.error(e, 'Error creating character')
 
