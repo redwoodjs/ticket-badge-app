@@ -54,6 +54,11 @@ export const createParticipant: MutationResolvers['createParticipant'] =
           from: 'conference@redwoodjs.com',
           subject:
             "🎟️ Confirmation: You're Registered for the RedwoodJS Conference!",
+          attachments: [
+            {
+              filename: `${process.env.REDWOOD_ENV_BASE_URL}/files/RedwoodJSConference2023.ics`,
+            },
+          ],
         }
       )
 
