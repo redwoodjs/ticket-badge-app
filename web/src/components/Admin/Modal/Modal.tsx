@@ -21,7 +21,7 @@ const Modal = ({ children, handleClose, isShowing = false }) => {
   return (
     <AnimatePresence>
       {isShowing && (
-        <div className="z-modal fixed inset-0 flex items-center justify-center">
+        <div className="fixed inset-0 z-modal flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -1,7 +1,7 @@
-import type { Prisma } from '@prisma/client'
+// import type { Prisma } from '@prisma/client'
 import { db } from 'api/src/lib/db'
 
-import { hashPassword } from '@redwoodjs/auth-dbauth-api'
+// import { hashPassword } from '@redwoodjs/auth-dbauth-api'
 
 export default async () => {
   try {
@@ -11,10 +11,10 @@ export default async () => {
     //
     // Update "const data = []" to match your data model and seeding needs
     //
-    const partnerType = [
-      { id: 1, name: 'individual' },
-      { id: 2, name: 'company' },
-    ]
+    // const partnerType = [
+    //   { id: 1, name: 'individual' },
+    //   { id: 2, name: 'company' },
+    // ]
 
     const partnerData = [
       // To try this example data with the UserExample model in schema.prisma,

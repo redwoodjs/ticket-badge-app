@@ -125,8 +125,8 @@ const Badge = ({
         })
       )
 
-      let startX = 0
-      let startY = 0
+      // let startX = 0
+      // let startY = 0
 
       const ENDX = myCordFront.current.getAttribute('x2')
       const ENDY = myCordFront.current.getAttribute('y2')
