@@ -37,10 +37,10 @@ const CustomizeTicketPage = () => {
         description="Personalize your virtual ticket for the RedwoodJS Conference, connecting it to your GitHub account."
       />
 
-      <main className="page flex h-full items-center">
+      <main className="page h-full md:flex md:items-center">
         <div>
           <h1 className="page-title mb-8">You&apos;re In!</h1>
-          <p className="mb-[72px] text-xl">
+          <p className="mb-[48px] text-xl md:mb-[72px]">
             Please check you email for a registration link.
           </p>
           <h2 className="subheading mb-5 text-chestnutRose">

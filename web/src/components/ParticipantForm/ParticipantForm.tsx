@@ -74,7 +74,7 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
     <>
       {/* partner */}
       {partner.logo && (
-        <div className="mb-6 flex flex-col items-start text-left font-wide uppercase sm:flex-row sm:items-center sm:gap-8 md:mb-12 md:whitespace-nowrap lg:text-xl">
+        <div className="mb-6 flex flex-col items-start text-left font-wide uppercase md:mb-12 md:whitespace-nowrap lg:flex-row lg:items-center lg:gap-8 lg:text-xl">
           <img
             src={partner.logo}
             alt={partner.name}
@@ -88,7 +88,7 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
 
       {/* speaker */}
       {partner.avatar && (
-        <div className="mb-6 flex flex-row items-center justify-start gap-4 text-left font-wide uppercase md:mb-12 md:flex-row md:gap-8 md:whitespace-nowrap md:text-xl">
+        <div className="mb-6 flex flex-row items-center justify-start gap-4 text-left font-wide uppercase lg:mb-12 lg:flex-row lg:gap-8 lg:whitespace-nowrap lg:text-xl">
           <img
             src={partner.avatar}
             alt={partner.name}
@@ -99,7 +99,7 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
         </div>
       )}
 
-      {/* partner and participant sharing */}
+      {/* text only (for participant and speaker) */}
       {!partner.avatar && !partner.logo && (
         <div className="mb-12 flex flex-col text-center font-wide uppercase md:flex-row md:items-center md:gap-8 md:whitespace-nowrap md:text-xl">
           {partner.name}{' '}

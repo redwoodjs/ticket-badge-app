@@ -3,5 +3,5 @@ export const Constants = Object.freeze({
   SPEAKERS: 'https://www.redwoodjsconf.com/speakers',
   GITHUB_URL: 'https://github.com/ahaywood/redwoodjs-partner-badges',
   DEFAULT_PARTNER_SLUG: 'redwoodjs',
-  CALENDAR_URL: 'http://lu.ma',
+  CALENDAR_URL: `${process.env.REDWOOD_ENV_BASE_URL}/files/RedwoodJSConference2023.ics`,
 })
