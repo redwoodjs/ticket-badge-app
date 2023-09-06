@@ -28,6 +28,8 @@ COPY web web
 ENV GITHUB_OAUTH_CLIENT_ID=1ca0354cfbd95b99a884
 ENV GITHUB_OAUTH_SCOPES=read:user
 ENV GITHUB_OAUTH_REDIRECT_URI=https://ticket.redwoodjs.com/.redwood/functions/oauth/callback
+ENV REDWOOD_ENV_SCREENSHOT_URL=https://ticket.redwoodjs.com
+ENV REDWOOD_ENV_BASE_URL=https://ticket.redwoodjs.com
 RUN node ./node_modules/.bin/rw build web
 
 FROM dependencies as api_build
