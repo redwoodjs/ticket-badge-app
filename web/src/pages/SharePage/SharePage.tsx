@@ -28,11 +28,11 @@ const SharePage = () => {
     <>
       <MetaTags title="Share" description="Share page" />
 
-      <main className="page flex h-full items-center">
+      <main className="page h-full md:flex md:items-center">
         <div>
           <h1 className="page-title mb-4">We Can&apos;t Wait to See You</h1>
           <h2 className="subheading mb-12">September 27 - 28, 2023</h2>
-          <div className="grid w-full grid-cols-2 gap-5">
+          <div className="grid w-full grid-cols-1 gap-5 lg:grid-cols-2">
             <div>
               <a
                 href={TwitterShareUrl({
@@ -65,7 +65,11 @@ const SharePage = () => {
               </a>
             </div>
             <div>
-              <a href={Constants.CALENDAR_URL} className="share-button">
+              <a
+                href={Constants.CALENDAR_URL}
+                className="share-button"
+                download={true}
+              >
                 <Icon id="calendar" />
                 Add to Calendar
               </a>

@@ -72,41 +72,54 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
 
   return (
     <>
-      <div className="mb-12 flex items-center gap-8 whitespace-nowrap text-center font-wide text-xl uppercase">
-        {partner.logo && (
-          <>
-            <img src={partner.logo} alt={partner.name} className="h-[80px]" />
+      {/* partner */}
+      {partner.logo && (
+        <div className="mb-6 flex flex-col items-start text-left font-wide uppercase md:mb-12 md:whitespace-nowrap lg:flex-row lg:items-center lg:gap-8 lg:text-xl">
+          <img
+            src={partner.logo}
+            alt={partner.name}
+            className="h-[55px] lg:h-[80px]"
+          />
+          <div className="block md:inline-block">
             {participantName ? `& ${participantName} invite` : 'invites'} you to
-          </>
-        )}
-        {partner.avatar && (
-          <>
-            <img
-              src={partner.avatar}
-              alt={partner.name}
-              className="aspect-square max-h-[60px] rounded-full object-cover"
-            />
-            {partner.name}{' '}
-            {participantName ? `& ${participantName} invite` : 'invites'} you to
-          </>
-        )}
-        {!partner.avatar && !partner.logo && (
-          <span>
-            {partner.name}{' '}
-            {participantName ? `& ${participantName} invite` : 'invites'} you to
-          </span>
-        )}
-      </div>
+          </div>
+        </div>
+      )}
 
-      <div>
+      {/* speaker */}
+      {partner.avatar && (
+        <div className="mb-6 flex flex-row items-center justify-start gap-4 text-left font-wide uppercase lg:mb-12 lg:flex-row lg:gap-8 lg:whitespace-nowrap lg:text-xl">
+          <img
+            src={partner.avatar}
+            alt={partner.name}
+            className="aspect-square max-h-[60px] max-w-[60px] rounded-full object-cover"
+          />
+          {partner.name}{' '}
+          {participantName ? `& ${participantName} invite` : 'invites'} you to
+        </div>
+      )}
+
+      {/* text only (for participant and speaker) */}
+      {!partner.avatar && !partner.logo && (
+        <div className="mb-12 flex flex-col text-center font-wide uppercase md:flex-row md:items-center md:gap-8 md:whitespace-nowrap md:text-xl">
+          {partner.name}{' '}
+          {participantName ? `& ${participantName} invite` : 'invites'} you to
+        </div>
+      )}
+
+      <div className="pb-10">
         <h1 className="page-title mb-5">
           Register & Get your
           <br />
           <span className="text-chestnutRose">Free</span> Virtual Ticket
         </h1>
         <h2 className="subheading mb-7">September 27 - 28, 2023</h2>
-        <Form formMethods={formMethods} onSubmit={onSubmit} className="mb-16">
-          <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-gray-200 px-9 pb-7 pt-10">
+        <Form
+          formMethods={formMethods}
+          onSubmit={onSubmit}
+          className="mb-6 lg:mb-16"
+        >
+          <div className="virtual-ticket-form relative flex flex-col gap-5 rounded-2xl bg-gray-200 px-6 pb-7 pt-4 md:px-9 md:pt-10">
             <Label name="email" htmlFor="email">
               Enter Your Email Address
             </Label>
@@ -133,8 +146,8 @@ const ParticipantForm = ({ partner, participantName = '' }: Props) => {
         </Form>
 
         {partner.inPersonUrl && (
-          <div className="px-10">
-            <h2 className="subheading mb-8 ">
+          <div className="px-6 lg:px-10">
+            <h2 className="subheading mb-8">
               <span className="text-steelBlue">or</span> Use{' '}
               <span className="text-chestnutRose">{partner.inPersonCode}</span>{' '}
               for{' '}
