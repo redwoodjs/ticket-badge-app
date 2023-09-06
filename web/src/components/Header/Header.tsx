@@ -7,8 +7,12 @@ interface Props {
 
 const Header = ({ isNavShowing = false, toggleNav }: Props) => {
   return (
-    <header className="flex items-center gap-x-16 px-8 py-5">
-      <img src="/images/logo.svg" alt="Redwood Conference" />
+    <header className="flex items-center gap-x-16 px-4 py-5 md:px-10">
+      <img
+        src="/images/logo.svg"
+        alt="Redwood Conference"
+        className="w-[120px] sm:w-[160px]"
+      />
       <nav
         className={`${
           isNavShowing ? 'top-0' : '-top-full'

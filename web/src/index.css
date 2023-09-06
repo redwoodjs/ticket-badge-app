@@ -63,23 +63,23 @@
 
 @layer components {
   .page {
-    @apply max-w-[600px] pt-4;
+    @apply pt-[380px] sm:max-w-[66%] md:max-w-[40%] lg:max-w-[50%] xl:max-w-[600px] sm:pt-4;
   }
 
   .page-title {
-    @apply font-condensed text-[84px] leading-[0.9] text-darkSlateGray;
+    @apply font-condensed text-[72px] md:text-[84px] leading-[0.9] text-darkSlateGray;
   }
 
   .subheading {
-    @apply font-wide text-xl text-steelBlue;
+    @apply font-wide lg:text-xl text-steelBlue;
   }
 
   .form-placement {
-    @apply h-full pl-10 2xl:pl-[150px]
+    @apply h-full px-4 md:pl-10 2xl:pl-[150px]
   }
 
   .badge-placement {
-    @apply absolute -top-[320px] bottom-auto lg:top-auto lg:bottom-[100px] right-[10%] xl:right-[200px] 2xl:right-[300px] scale-50 lg:scale-100
+    @apply absolute -top-[320px] bottom-auto md:top-auto md:bottom-[100px] right-auto left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:-right-[7%] md:right-[10%] xl:right-[200px] 2xl:right-[300px] scale-50 md:scale-100
   }
 
   @media (min-height: 888px) {
@@ -105,13 +105,15 @@
     @apply absolute font-sans font-bold transition-all duration-300 ease-in-out;
   }
 
+  /* when the text field is empty */
   .virtual-ticket-form label:has(+ input[type="email"]:placeholder-shown) {
-    @apply pointer-events-none top-10 text-xl;
+    @apply pointer-events-none top-6 md:top-10 text-base lg:text-xl;
   }
 
+  /* whn there's text */
   .virtual-ticket-form label:has(+ input[type="email"]:focus),
   .virtual-ticket-form label:has(+ input[type="email"]) {
-    @apply text-sm top-6
+    @apply lg:text-sm text-xs top-6
   }
 
   .admin-nav ul li a,
