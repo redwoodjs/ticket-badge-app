@@ -23,7 +23,7 @@ export default async () => {
       {
         name: 'RedwoodJS',
         slug: 'redwoodjs',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892194/partner-badges/logos/ybf04qdgturvstwtakpo.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892194/partner-badges/logos/ybf04qdgturvstwtakpo.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -37,7 +37,7 @@ export default async () => {
       {
         name: 'Prisma',
         slug: 'prisma',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693419639/partner-badges/logos/u4xeidwwcmfdengolagp.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693419639/partner-badges/logos/u4xeidwwcmfdengolagp.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -51,7 +51,7 @@ export default async () => {
       {
         name: 'Fixie',
         slug: 'fixie',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892252/partner-badges/logos/ne30t8jyr3znboewy5qx.png',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892252/partner-badges/logos/ne30t8jyr3znboewy5qx.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -65,7 +65,7 @@ export default async () => {
       {
         name: 'The Guild',
         slug: 'guild',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892422/partner-badges/logos/n8npxrfsakisimchnkgm.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892422/partner-badges/logos/n8npxrfsakisimchnkgm.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -79,7 +79,7 @@ export default async () => {
       {
         name: 'Inngest',
         slug: 'inngest',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892691/partner-badges/logos/amcuxnalfmsiapslajk5.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892691/partner-badges/logos/amcuxnalfmsiapslajk5.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -93,7 +93,7 @@ export default async () => {
       {
         name: 'Vercel',
         slug: 'vercel',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892496/partner-badges/logos/kxupiwv2wiosrjlyj00v.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892496/partner-badges/logos/kxupiwv2wiosrjlyj00v.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -107,7 +107,7 @@ export default async () => {
       {
         name: 'Apollo',
         slug: 'apollo',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892719/partner-badges/logos/nyboaafks5tg9s49bltd.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892719/partner-badges/logos/nyboaafks5tg9s49bltd.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -121,7 +121,7 @@ export default async () => {
       {
         name: 'Coherence',
         slug: 'coherence',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892765/partner-badges/logos/yh5g2aqfnnj7jbqpdsqr.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892765/partner-badges/logos/yh5g2aqfnnj7jbqpdsqr.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -135,7 +135,7 @@ export default async () => {
       {
         name: 'Clerk',
         slug: 'clerk',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892798/partner-badges/logos/m1uhb7m4ocqbnqleodlh.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892798/partner-badges/logos/m1uhb7m4ocqbnqleodlh.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -149,7 +149,7 @@ export default async () => {
       {
         name: 'Stripe',
         slug: 'stripe',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892835/partner-badges/logos/ga2lhys9e5n6a9e82dyw.svg',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892835/partner-badges/logos/ga2lhys9e5n6a9e82dyw.svg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -163,7 +163,7 @@ export default async () => {
       {
         name: 'Supabase',
         slug: 'supabase',
-        logo: 'http://res.cloudinary.com/duh8p234y/image/upload/v1693892887/partner-badges/logos/vvbekxgkhtdofkqepxpp.webp',
+        logo: 'https://res.cloudinary.com/duh8p234y/image/upload/v1693892887/partner-badges/logos/vvbekxgkhtdofkqepxpp.webp',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -178,7 +178,7 @@ export default async () => {
         name: 'Tom Preston-Werner',
         slug: 'tom',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891011/partner-badges/logos/iyqf0zeyuyffiuibcxrk.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891011/partner-badges/logos/iyqf0zeyuyffiuibcxrk.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -193,7 +193,7 @@ export default async () => {
         name: 'Orta Therox',
         slug: 'orta',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891050/partner-badges/logos/m5hdzw4w4mfimphhxxck.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891050/partner-badges/logos/m5hdzw4w4mfimphhxxck.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -208,7 +208,7 @@ export default async () => {
         name: 'Diana Mounter',
         slug: 'diana',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693890902/partner-badges/logos/d6pwovqnfgtaul19tgyv.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693890902/partner-badges/logos/d6pwovqnfgtaul19tgyv.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -223,7 +223,7 @@ export default async () => {
         name: 'Amy Dutton',
         slug: 'amy',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693890745/partner-badges/logos/uyulepfd7muj0svpni5w.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693890745/partner-badges/logos/uyulepfd7muj0svpni5w.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -238,7 +238,7 @@ export default async () => {
         name: 'Jerel Miller',
         slug: 'jerel',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891083/partner-badges/logos/bretitknrfi5jhxgbaik.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891083/partner-badges/logos/bretitknrfi5jhxgbaik.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -253,7 +253,7 @@ export default async () => {
         name: 'Brian Douglas',
         slug: 'bdougie',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891108/partner-badges/logos/zhdtgaoebulorvkvbkcx.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891108/partner-badges/logos/zhdtgaoebulorvkvbkcx.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -268,7 +268,7 @@ export default async () => {
         name: 'Janet McDonald',
         slug: 'janet',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891134/partner-badges/logos/qe9ktfvz8oel30inucaf.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891134/partner-badges/logos/qe9ktfvz8oel30inucaf.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -283,7 +283,7 @@ export default async () => {
         name: 'Tristan Kalos',
         slug: 'tristan',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891165/partner-badges/logos/gidklbznrjgyrkz5mp7t.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891165/partner-badges/logos/gidklbznrjgyrkz5mp7t.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -298,7 +298,7 @@ export default async () => {
         name: 'Laurin Quast',
         slug: 'laurin',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891185/partner-badges/logos/ax09zbco0mvbijqoos3k.jpg',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891185/partner-badges/logos/ax09zbco0mvbijqoos3k.jpg',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -313,7 +313,7 @@ export default async () => {
         name: 'Michael Mentele',
         slug: 'michael',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891208/partner-badges/logos/kcc6suyycqyizvpy4tym.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891208/partner-badges/logos/kcc6suyycqyizvpy4tym.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -328,7 +328,7 @@ export default async () => {
         name: 'David S. Price',
         slug: 'david',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891227/partner-badges/logos/cjtykjdoxsgqbin6u9hv.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891227/partner-badges/logos/cjtykjdoxsgqbin6u9hv.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -343,7 +343,7 @@ export default async () => {
         name: 'Danny Choudhury',
         slug: 'danny',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891247/partner-badges/logos/ajoxw66esxlxsngm5uoa.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891247/partner-badges/logos/ajoxw66esxlxsngm5uoa.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -358,7 +358,7 @@ export default async () => {
         name: 'Eugene Kirpichov',
         slug: 'eugene',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891270/partner-badges/logos/mmyhfm1w8rkjl4zpm0oz.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891270/partner-badges/logos/mmyhfm1w8rkjl4zpm0oz.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -373,7 +373,7 @@ export default async () => {
         name: 'Nick Heiner',
         slug: 'nick',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891296/partner-badges/logos/spdzuek1jm9q1ehffjy6.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891296/partner-badges/logos/spdzuek1jm9q1ehffjy6.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -388,7 +388,7 @@ export default async () => {
         name: 'Ben Lower',
         slug: 'ben',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891318/partner-badges/logos/qbiob2g0zzwvu8nta1cj.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891318/partner-badges/logos/qbiob2g0zzwvu8nta1cj.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -403,7 +403,7 @@ export default async () => {
         name: 'Jon Harrell',
         slug: 'jon',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891338/partner-badges/logos/r4tc1jofz0sac7kznfeq.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891338/partner-badges/logos/r4tc1jofz0sac7kznfeq.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -418,7 +418,7 @@ export default async () => {
         name: 'Bekah',
         slug: 'bekah',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891357/partner-badges/logos/wpb2oeu4f9wsosf5hisi.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891357/partner-badges/logos/wpb2oeu4f9wsosf5hisi.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
@@ -433,7 +433,7 @@ export default async () => {
         name: 'Elston Baretto',
         slug: 'elston',
         avatar:
-          'http://res.cloudinary.com/duh8p234y/image/upload/v1693891387/partner-badges/logos/p2cjmasvjly0m2phcdk6.png',
+          'https://res.cloudinary.com/duh8p234y/image/upload/v1693891387/partner-badges/logos/p2cjmasvjly0m2phcdk6.png',
         virtualCode: '',
         virtualDiscount: 100,
         virtualEndDate: '2023-09-27T00:00:00.000Z',
