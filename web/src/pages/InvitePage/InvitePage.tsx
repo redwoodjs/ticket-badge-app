@@ -27,13 +27,13 @@ const InvitePage = ({ id }: InviteLayoutProps) => {
         </div>
         <Header />
         <div className="relative h-[90%] w-full">
-          <div className="h-full pl-[150px]">
+          <div className="form-placement">
             <main className="page">
               {/* form on the left side */}
               <InviteCell id={id} />
             </main>
           </div>
-          <div className="absolute bottom-[100px] right-[300px]">
+          <div className="badge-placement">
             {/* badge on the right with the participant details */}
             <BadgeCell id={id} />
           </div>
