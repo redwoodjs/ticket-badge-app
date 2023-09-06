@@ -44,7 +44,7 @@ const CustomizeTicketPage = () => {
             Please check you email for a registration link.
           </p>
           <h2 className="subheading mb-5 text-chestnutRose">
-            Now Make it Yours
+            Now Make it Yours!
           </h2>
           <a
             href={`https://github.com/login/oauth/authorize?client_id=${
