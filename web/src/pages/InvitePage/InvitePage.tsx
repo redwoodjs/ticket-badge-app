@@ -1,6 +1,5 @@
 import { MetaTags } from '@redwoodjs/web'
 
-import Badge from 'src/components/Badge/Badge'
 import BadgeCell from 'src/components/BadgeCell'
 import Header from 'src/components/Header/Header'
 import InviteCell from 'src/components/InviteCell'

@@ -39,7 +39,7 @@ const SlideOut = ({ children, handleClose, isShowing = false }: Props) => {
             initial={{ x: 500 }}
             animate={{ x: 0 }}
             exit={{ x: 500 }}
-            className="z-overlaySlideout fixed bottom-0 right-0 top-0 h-screen w-[500px] overflow-x-scroll bg-black px-16 py-24"
+            className="fixed bottom-0 right-0 top-0 z-overlaySlideout h-screen w-[500px] overflow-x-scroll bg-black px-16 py-24"
             ref={slideOutPanelRef}
           >
             <button

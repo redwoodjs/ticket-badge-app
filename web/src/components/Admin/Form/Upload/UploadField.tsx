@@ -66,9 +66,9 @@ const UploadField = ({ defaultValue, name, onChange }: Props) => {
   }
 
   // TODO: handle select file from computer
-  const handleSelectFile = () => {
-    console.log('handle selected file')
-  }
+  // const handleSelectFile = () => {
+  //   console.log('handle selected file')
+  // }
 
   const handleDrop = (e) => {
     preventDefaults(e)
