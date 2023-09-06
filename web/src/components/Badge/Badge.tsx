@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 
 import { gsap } from 'gsap'
-import { Draggable } from 'gsap/Draggable'
+import { Draggable } from 'gsap/dist/Draggable'
 
 interface Props {
   avatar?: string
@@ -209,7 +209,7 @@ const Badge = ({
         viewBox="0 0 350 150"
         width="350"
         height="150"
-        preserveAspectRatio="XMinYMin"
+        preserveAspectRatio="xMinYMin"
         style={{ overflow: 'visible' }}
       >
         <line

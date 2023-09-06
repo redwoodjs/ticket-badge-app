@@ -1,5 +1,3 @@
-import { Toaster } from '@redwoodjs/web/toast'
-
 import AdminHeader from 'src/components/Admin/AdminHeader/AdminHeader'
 
 type AdminLayoutProps = {
@@ -10,7 +8,6 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
     <div className="mx-14">
       <AdminHeader />
-      <Toaster />
       {children}
     </div>
   )

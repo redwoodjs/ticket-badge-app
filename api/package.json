@@ -5,13 +5,13 @@
   "dependencies": {
     "@envelop/response-cache": "3.2.0",
     "@react-email/components": "0.0.7",
-    "@redwoodjs/api": "7.0.0-canary.269",
-    "@redwoodjs/auth-dbauth-api": "7.0.0-canary.269",
-    "@redwoodjs/graphql-server": "7.0.0-canary.269",
-    "@redwoodjs/mailer-core": "7.0.0-canary.269",
-    "@redwoodjs/mailer-handler-in-memory": "7.0.0-canary.269",
-    "@redwoodjs/mailer-handler-nodemailer": "7.0.0-canary.269",
-    "@redwoodjs/mailer-handler-studio": "7.0.0-canary.269",
-    "@redwoodjs/mailer-renderer-react-email": "7.0.0-canary.269"
+    "@redwoodjs/api": "7.0.0-canary.285",
+    "@redwoodjs/auth-dbauth-api": "7.0.0-canary.285",
+    "@redwoodjs/graphql-server": "7.0.0-canary.285",
+    "@redwoodjs/mailer-core": "7.0.0-canary.285",
+    "@redwoodjs/mailer-handler-in-memory": "7.0.0-canary.285",
+    "@redwoodjs/mailer-handler-nodemailer": "7.0.0-canary.285",
+    "@redwoodjs/mailer-handler-studio": "7.0.0-canary.285",
+    "@redwoodjs/mailer-renderer-react-email": "7.0.0-canary.285"
   }
 }

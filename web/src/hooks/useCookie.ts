@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 const getItem = (key: string) =>
-  document.cookie.split('; ').reduce((total, currentCookie) => {
+  globalThis?.document?.cookie.split('; ').reduce((total, currentCookie) => {
     const item = currentCookie.split('=')
     const storedKey = item[0]
     const storedValue = item[1]

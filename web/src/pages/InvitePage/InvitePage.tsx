@@ -1,5 +1,4 @@
 import { MetaTags } from '@redwoodjs/web'
-import { Toaster } from '@redwoodjs/web/toast'
 
 import Badge from 'src/components/Badge/Badge'
 import BadgeCell from 'src/components/BadgeCell'
@@ -17,7 +16,6 @@ const InvitePage = ({ id }: InviteLayoutProps) => {
       <MetaTags title="Invite" description="Invite page" />
 
       <div className="v-screen badge-page h-screen" id="page">
-        <Toaster />
         <div>
           <a
             href={Constants.GITHUB_URL}

@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for redwoodjs-partner-badges on 2023-08-31T16:54:45+02:00
+# fly.toml app configuration file generated for badge-app-production on 2023-09-05T12:06:31-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "redwoodjs-partner-badges"
-primary_region = "iad"
+app = "badge-app-production"
+primary_region = "den"
 
 [build]
 
@@ -20,5 +20,5 @@ primary_region = "iad"
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
   processes = ["app"]
