@@ -7,6 +7,7 @@ app = "badge-app-production"
 primary_region = "den"
 
 [build]
+  build-target = "api_web_serve"
 
 [deploy]
   release_command = ".fly/release.sh"
@@ -21,4 +22,3 @@ primary_region = "den"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 1
-  processes = ["app"]
