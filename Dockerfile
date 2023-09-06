@@ -25,9 +25,6 @@ COPY graphql.config.js .
 FROM dependencies as web_build
 
 COPY web web
-ENV GITHUB_OAUTH_CLIENT_ID=1ca0354cfbd95b99a884
-ENV GITHUB_OAUTH_SCOPES=read:user
-ENV GITHUB_OAUTH_REDIRECT_URI=https://redwoodjs-partner-badges.fly.dev/.redwood/functions/oauth/callback
 RUN node ./node_modules/.bin/rw build web
 
 FROM dependencies as api_build
