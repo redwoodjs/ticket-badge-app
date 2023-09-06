@@ -5,7 +5,7 @@ import { toast } from '@redwoodjs/web/toast'
 
 import { useAuth } from 'src/auth'
 import Icon from 'src/components/Icon/Icon'
-import { getCurrentUser } from 'src/lib/auth'
+// import { getCurrentUser } from 'src/lib/auth'
 
 import ButtonWithToolTip from '../../ButtonWithTooltip/ButtonWithTooltip'
 import Modal from '../../Modal/Modal'
