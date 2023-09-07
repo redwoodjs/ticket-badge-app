@@ -1,51 +1,87 @@
-ARG BASE_IMAGE=node:18.17.0-alpine
-FROM ${BASE_IMAGE} as base
+# base
+# ------------------------------------------------
+FROM node:18-bookworm-slim as base
 
-RUN mkdir /app
-WORKDIR /app
+RUN apt-get update && apt-get install -y \
+    openssl \
+    && rm -rf /var/lib/apt/lists/*
 
-# Required for building the api and web distributions
-ENV NODE_ENV development
+USER node
+WORKDIR /home/node/app
 
-FROM base as dependencies
+COPY --chown=node:node .yarn/plugins .yarn/plugins
+COPY --chown=node:node .yarn/releases .yarn/releases
+COPY --chown=node:node .yarnrc.yml .
+COPY --chown=node:node package.json .
+COPY --chown=node:node api/package.json api/
+COPY --chown=node:node web/package.json web/
+COPY --chown=node:node yarn.lock .
+COPY --chown=node:node .env.defaults .
 
-COPY .yarn .yarn
-COPY .yarnrc.yml .yarnrc.yml
-COPY package.json package.json
-COPY web/package.json web/package.json
-COPY api/package.json api/package.json
-COPY yarn.lock yarn.lock
+RUN --mount=type=cache,target=/home/node/.yarn/berry/cache,uid=1000 \
+    --mount=type=cache,target=/home/node/.cache,uid=1000 \
+    CI=1 yarn install
 
-RUN --mount=type=cache,target=/root/.yarn/berry/cache \
-    --mount=type=cache,target=/root/.cache yarn install --immutable
+COPY --chown=node:node redwood.toml .
+COPY --chown=node:node graphql.config.js .
 
-COPY redwood.toml .
-COPY graphql.config.js .
+# api build
+# ------------------------------------------------
+FROM base as api_build
 
-FROM dependencies as web_build
+COPY --chown=node:node api api
+RUN yarn redwood build api
 
-COPY web web
-ENV GITHUB_OAUTH_CLIENT_ID=1ca0354cfbd95b99a884
-ENV GITHUB_OAUTH_SCOPES=read:user
-ENV GITHUB_OAUTH_REDIRECT_URI=https://ticket.redwoodjs.com/.redwood/functions/oauth/callback
-ENV REDWOOD_ENV_SCREENSHOT_URL=https://ticket.redwoodjs.com
-ENV REDWOOD_ENV_BASE_URL=https://ticket.redwoodjs.com
-RUN node ./node_modules/.bin/rw build web
+# web prerender build
+# ------------------------------------------------
+# FROM api_build as web_build_with_prerender
 
-FROM dependencies as api_build
+# COPY --chown=node:node web web
+# RUN yarn redwood build web
 
-COPY api api
-RUN node ./node_modules/.bin/rw build api
+# web build
+# ------------------------------------------------
+FROM base as web_build
 
-FROM dependencies
+COPY --chown=node:node web web
+RUN yarn redwood build web --no-prerender
 
-ENV NODE_ENV production
+# serve api and fe
+# ------------------------------------------------
+FROM node:18-bookworm-slim as api_fe_serve
 
-COPY --from=web_build /app/web/dist /app/web/dist
-COPY --from=api_build /app/api /app/api
-COPY --from=api_build /app/node_modules/.prisma /app/node_modules/.prisma
+RUN apt-get update && apt-get install -y \
+    openssl \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY .fly .fly
+USER node
+WORKDIR /home/node/app
+
+COPY --chown=node:node .yarn/plugins .yarn/plugins
+COPY --chown=node:node .yarn/releases .yarn/releases
+COPY --chown=node:node .yarnrc.yml .
+COPY --chown=node:node api/package.json api/package.json
+COPY --chown=node:node web/package.json web/package.json
+COPY --chown=node:node package.json .
+COPY --chown=node:node yarn.lock .
+
+RUN yarn plugin import workspace-tools
+RUN --mount=type=cache,target=/home/node/.yarn/berry/cache,uid=1000 \
+    --mount=type=cache,target=/home/node/.cache,uid=1000 \
+    CI=1 yarn workspaces focus api web --production
+
+COPY --chown=node:node redwood.toml .
+COPY --chown=node:node graphql.config.js .
+
+COPY --chown=node:node --from=api_build /home/node/app/api/dist /home/node/app/api/dist
+COPY --chown=node:node --from=api_build /home/node/app/api/db /home/node/app/api/db
+COPY --chown=node:node --from=api_build /home/node/app/node_modules/.prisma /home/node/app/node_modules/.prisma
+
+COPY --chown=node:node --from=web_build /home/node/app/web/dist /home/node/app/web/dist
+
+ENV NODE_ENV=production
+
+COPY --chown=node:node .fly .fly
 
 ENTRYPOINT ["sh"]
 CMD [".fly/start.sh"]
