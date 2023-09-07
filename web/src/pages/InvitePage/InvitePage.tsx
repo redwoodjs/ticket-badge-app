@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import InviteCell from 'src/components/InviteCell'
@@ -12,6 +13,13 @@ type InviteLayoutProps = {
 
 const InvitePage = ({ id }: InviteLayoutProps) => {
   const [participantId] = useCookie('participantId')
+
+  // if the current user has already registered on this machine, redirect to their information
+  useEffect(() => {
+    if (participantId) {
+      navigate(routes.invite({ id: parseInt(participantId) }))
+    }
+  }, [participantId])
 
   return (
     <>
