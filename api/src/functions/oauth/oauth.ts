@@ -1,6 +1,7 @@
 import type { APIGatewayEvent, Context } from 'aws-lambda'
 
 import { db } from 'src/lib/db'
+import { og } from 'src/lib/og'
 
 /**
  * The handler function is your code that processes http request events.
@@ -69,6 +70,8 @@ const callback = async (event) => {
 }
 
 const updateParticipant = async (participantId: string, providerUser) => {
+  const ogImage = await og(parseInt(participantId))
+
   await db.participant.update({
     where: { id: parseInt(participantId) },
     data: {
@@ -78,6 +81,7 @@ const updateParticipant = async (participantId: string, providerUser) => {
       location: providerUser.location,
       twitter: providerUser.twitter,
       company: providerUser.company,
+      ogImage,
     },
   })
   return
