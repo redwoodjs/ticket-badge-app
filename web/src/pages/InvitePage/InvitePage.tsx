@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import { navigate, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
 
 import InviteCell from 'src/components/InviteCell'
 import Share from 'src/components/Share/Share'
@@ -23,8 +22,6 @@ const InvitePage = ({ id }: InviteLayoutProps) => {
 
   return (
     <>
-      <MetaTags title="Invite" description="Invite page" />
-
       {/* if the user has already filled out the form, display their share data */}
       {/* otherwise, display the form */}
       {participantId ? (

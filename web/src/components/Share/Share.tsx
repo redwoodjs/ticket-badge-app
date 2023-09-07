@@ -1,5 +1,3 @@
-import { MetaTags } from '@redwoodjs/web'
-
 import Icon from 'src/components/Icon/Icon'
 import { TwitterShareUrl } from 'src/helpers/TwitterHelpers'
 import { useCopyToClipboard } from 'src/hooks/useCopyToClipboard'

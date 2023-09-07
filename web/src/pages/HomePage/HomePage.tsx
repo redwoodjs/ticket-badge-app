@@ -1,5 +1,3 @@
-import { MetaTags } from '@redwoodjs/web'
-
 import ParticipantCell from 'src/components/ParticipantCell'
 import { Constants } from 'src/utils/Constants'
 
@@ -21,11 +19,6 @@ const HomePage = ({ slug }: Props) => {
 
   return (
     <>
-      <MetaTags
-        title="Partner Badge"
-        description="Register for a free ticket to the RedwoodJS Conference and level up your web development skills! Join industry experts and fellow React developers for insightful talks, workshops, and networking opportunities. Don't miss this chance to be part of the first RedwoodJS Conference. Sign up now!"
-      />
-
       <main className="page">
         <ParticipantCell slug={slug} />
       </main>
