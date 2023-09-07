@@ -35,6 +35,8 @@ const CustomizeTicketPage = () => {
       <MetaTags
         title="Customize your RedwoodJS Conference Ticket"
         description="Personalize your virtual ticket for the RedwoodJS Conference, connecting it to your GitHub account."
+        ogUrl={`${process.env.REDWOOD_ENV_BASE_URL}/customize`}
+        ogContentUrl={`${process.env.REDWOOD_ENV_BASE_URL}/images/og.png`}
       />
 
       <main className="page h-full md:flex md:items-center">
