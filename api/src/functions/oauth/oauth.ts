@@ -70,8 +70,6 @@ const callback = async (event) => {
 }
 
 const updateParticipant = async (participantId: string, providerUser) => {
-  const ogImage = await og(parseInt(participantId))
-
   await db.participant.update({
     where: { id: parseInt(participantId) },
     data: {
@@ -81,9 +79,19 @@ const updateParticipant = async (participantId: string, providerUser) => {
       location: providerUser.location,
       twitter: providerUser.twitter,
       company: providerUser.company,
-      ogImage,
     },
   })
+
+  // We have to do this in 2 database calls because the ogImage grabs the info
+  // out of the database and then displays it.
+  // If we try to run the `og` function beforehand and make a single database
+  // call it won't have everything it needs
+  const ogImage = await og(parseInt(participantId))
+  await db.participant.update({
+    where: { id: parseInt(participantId) },
+    data: { ogImage },
+  })
+
   return
 }
 
