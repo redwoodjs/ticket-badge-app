@@ -51,7 +51,7 @@ export const createParticipant: MutationResolvers['createParticipant'] =
         }),
         {
           to: input.email,
-          from: 'conference@redwoodjs.com',
+          from: 'RedwoodJS Conference <conference@redwoodjs.com>',
           subject:
             "🎟️ Confirmation: You're Registered for the RedwoodJS Conference!",
           attachments: [
