@@ -57,6 +57,8 @@ export const createParticipant: MutationResolvers['createParticipant'] =
           attachments: [
             {
               filename: `${process.env.REDWOOD_ENV_BASE_URL}/files/RedwoodJSConference2023.ics`,
+              path: `${process.env.REDWOOD_ENV_BASE_URL}/files/RedwoodJSConference2023.ics`,
+              content: 'calendarBuffer',
             },
           ],
         }
