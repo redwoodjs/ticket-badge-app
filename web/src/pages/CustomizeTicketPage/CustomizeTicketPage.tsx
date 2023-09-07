@@ -27,7 +27,7 @@ const CustomizeTicketPage = () => {
 
   // if the user has already customized their ticket, redirect to the share page
   if (!loading && !error && data?.participant?.githubId) {
-    navigate(routes.share())
+    navigate(routes.invite({ id: parseInt(participantId) }))
   }
 
   return (

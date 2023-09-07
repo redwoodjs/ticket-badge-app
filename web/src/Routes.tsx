@@ -34,7 +34,6 @@ const Routes = () => {
       </Set>
       <Set wrap={BadgeLayout}>
         <Route path="/invite/{id:Int}" page={InvitePage} name="invite" />
-        <Route path="/share" page={SharePage} name="share" />
         <Route path="/customize" page={CustomizeTicketPage} name="customizeTicket" />
         <Route path="/{slug:String}" page={HomePage} name="partner" />
         <Route path="/" page={HomePage} name="home" />
