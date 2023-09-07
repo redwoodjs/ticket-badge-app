@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
+import { useParams } from '@redwoodjs/router'
 
 import Badge from 'src/components/Badge/Badge'
 import BadgeCell from 'src/components/BadgeCell'
@@ -11,8 +13,20 @@ type BadgeLayoutProps = {
 }
 
 const BadgeLayout = ({ children }: BadgeLayoutProps) => {
+  const [currentParticipant, setCurrentParticipant] = useState<number>(null)
+  const { id } = useParams()
+
   const [participantId] = useCookie('participantId')
   const [isNavShowing, setIsNavShowing] = useState(false)
+
+  useEffect(() => {
+    if (id) {
+      setCurrentParticipant(parseInt(id))
+    } else if (participantId) {
+      setCurrentParticipant(parseInt(participantId))
+    }
+    console.log({ currentParticipant })
+  }, [participantId, id])
 
   const toggleNav = () => {
     setIsNavShowing((prevValue) => !prevValue)
@@ -43,8 +57,8 @@ const BadgeLayout = ({ children }: BadgeLayoutProps) => {
       <div className="relative h-[90%] w-full">
         <div className="form-placement">{children}</div>
         <div className="badge-placement">
-          {participantId ? (
-            <BadgeCell id={parseInt(participantId)} />
+          {currentParticipant ? (
+            <BadgeCell id={currentParticipant} />
           ) : (
             <Badge />
           )}
