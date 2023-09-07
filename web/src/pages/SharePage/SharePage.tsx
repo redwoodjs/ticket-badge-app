@@ -41,6 +41,8 @@ const SharePage = () => {
                   url: 'https://redwoodjsconf.com',
                 })}
                 className="share-button"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Icon id="twitter" />
                 Share on X / Twitter
