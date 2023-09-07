@@ -60,7 +60,7 @@ const callback = async (event) => {
     return {
       statusCode: 302,
       headers: {
-        Location: '/share',
+        Location: `/invite/${participantId}`,
       },
     }
   } catch (e) {
