@@ -12,6 +12,9 @@ type InviteLayoutProps = {
 
 const InvitePage = ({ id }: InviteLayoutProps) => {
   const [participantId] = useCookie('participantId')
+  if (!id) {
+    navigate(routes.home())
+  }
 
   // if the current user has already registered on this machine, redirect to their information
   useEffect(() => {

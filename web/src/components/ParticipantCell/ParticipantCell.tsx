@@ -1,5 +1,6 @@
 import type { partnerBySlugQuery } from 'types/graphql'
 
+import { navigate, routes } from '@redwoodjs/router'
 import {
   type CellSuccessProps,
   type CellFailureProps,
@@ -29,7 +30,9 @@ export const QUERY = gql`
 
 export const Loading = () => <div />
 
-export const Empty = () => <div>Partner not found</div>
+export const Empty = () => {
+  navigate(routes.home())
+}
 
 export const Failure = ({ error }: CellFailureProps) => (
   <div className="rw-cell-error">{error?.message}</div>
