@@ -1,6 +1,6 @@
 import type { APIGatewayEvent, Context } from 'aws-lambda'
-import { v2 as cloudinary } from 'cloudinary'
 
+import { db } from 'src/lib/db'
 import { logger } from 'src/lib/logger'
 
 /**
@@ -20,32 +20,36 @@ import { logger } from 'src/lib/logger'
  * function, and execution environment.
  */
 
-cloudinary.config({
-  cloud_name: 'duh8p234y',
-  api_key: '961468836523215',
-  api_secret: 'a676b67565c6767a6767d6767f676fe1',
-})
-
 export const handler = async (event: APIGatewayEvent, _context: Context) => {
-  logger.info(`${event.httpMethod} ${event.path}: generateShareImage function`)
+  // sets the default response
+  let statusCode = 200
+  let message = ''
 
-  // try {
-  //   console.log('🦄 TRYING 🦄')
-  //   const uploadedImage = await cloudinary.uploader.upload(
-  //     'https://api.apiflash.com/v1/urltoimage?access_key=eadde47932454b54a1718823d2ead7cd&wait_until=page_loaded&width=351&height=537&delay=3&url=https://97559d701b13.ngrok.app/download/19',
-  //     {
-  //       upload_preset: 'badges',
-  //       signatureAlgorithm: 'sha256',
-  //     }
-  //   )
-  //   console.log({ uploadedImage })
-  // } catch (error) {
-  //   console.error(error)
-  // }
+  logger.info(`${event.httpMethod} ${event.path}: og function`)
+
+  const { id } = event.queryStringParameters
+  if (id === undefined) {
+    statusCode = 400
+    message = `Please specify an id`
+    throw Error(message)
+  }
+
+  const saveImageInDb = async (url) => {
+    // save image in db
+    await db.participant.update({
+      where: { id: parseInt(id) },
+      data: {
+        ogImage: url,
+      },
+    })
+
+    console.log('🦄🦄🦄 MAGIC 🦄🦄🦄')
+    console.log({ url })
+  }
 
   const uploadFile = async () => {
-    const file =
-      'https://api.apiflash.com/v1/urltoimage?access_key=eadde47932454b54a1718823d2ead7cd&wait_until=page_loaded&width=351&height=537&delay=3&url=https://97559d701b13.ngrok.app/download/19'
+    const file = `${process.env.REDWOOD_ENV_API_FLASH}&width=1200&height=630&delay=3&url=${process.env.REDWOOD_ENV_SCREENSHOT_URL}/og/19`
+    console.log({ file })
 
     const url = `https://api.cloudinary.com/v1_1/${process.env.REDWOOD_ENV_CLOUDINARY_CLOUD}/image/upload`
     const formData = new FormData()
@@ -55,30 +59,27 @@ export const handler = async (event: APIGatewayEvent, _context: Context) => {
     fetch(url, {
       method: 'POST',
       body: formData,
-    }).then((response) => {
-      const result = response.json()
-      saveImageInDb(result)
+    }).then(async (response) => {
+      const result = await response.json()
+      saveImageInDb(result.url)
       return result
     })
   }
 
-  const saveImageInDb = async (result) => {
-    // save image in db
-    console.log({ result })
+  try {
+    const uploadedFile = await uploadFile()
+    console.log({ uploadedFile })
+  } catch (error) {
+    console.log({ error })
   }
 
-  const createOGImage = async () => {}
-
-  const uploadedFile = await uploadFile()
-  await createOGImage()
-
   return {
-    statusCode: 200,
+    statusCode,
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      data: 'generateShareImage function',
+      data: 'og function',
     }),
   }
 }

@@ -8,6 +8,7 @@ export const QUERY = gql`
     participant(id: $id) {
       avatar
       name
+      ogImage
       partner {
         id
         name
@@ -45,7 +46,11 @@ export const Success = ({ participant }) => {
         title={`${participant.name} Invites you to the RedwoodJS Conference`}
         description={`Join ${participant.name} at the RedwoodJS Conference! Get a free virtual ticket or 35% off an in-person pass. Experience the latest in web development and connect with leading experts. Register now for this must-attend event.`}
         ogUrl={`${process.env.REDWOOD_ENV_BASE_URL}/invite/${participant.id}`}
-        ogContentUrl={`${process.env.REDWOOD_ENV_BASE_URL}/images/og.png`}
+        ogContentUrl={
+          participant.ogImage
+            ? participant.ogImage
+            : `${process.env.REDWOOD_ENV_BASE_URL}/images/og.png`
+        }
       />
       <ParticipantForm
         partner={participant.partner}

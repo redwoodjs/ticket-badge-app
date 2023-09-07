@@ -1,11 +1,11 @@
 import { mockHttpEvent } from '@redwoodjs/testing/api'
 
-import { handler } from './generateShareImage'
+import { handler } from './og'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-functions
 
-describe('generateShareImage function', () => {
+describe('og function', () => {
   it('Should respond with 200', async () => {
     const httpEvent = mockHttpEvent({
       queryStringParameters: {
@@ -17,7 +17,7 @@ describe('generateShareImage function', () => {
     const { data } = JSON.parse(response.body)
 
     expect(response.statusCode).toBe(200)
-    expect(data).toBe('generateShareImage function')
+    expect(data).toBe('og function')
   })
 
   // You can also use scenarios to test your api functions

@@ -11,6 +11,7 @@ export const schema = gql`
     partner: Partner!
     partnerId: Int!
     createdAt: DateTime!
+    ogImage: String
   }
 
   type Query {

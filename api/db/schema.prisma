@@ -37,6 +37,7 @@ model Partner {
   createdAt        DateTime      @default(now())
   PartnerType      PartnerType   @relation(fields: [partnerTypeId], references: [id])
   partnerTypeId    Int
+  ogImage          String?
 }
 
 model Participant {
@@ -51,6 +52,7 @@ model Participant {
   partner   Partner  @relation(fields: [partnerId], references: [id])
   partnerId Int
   createdAt DateTime @default(now())
+  ogImage   String?
 }
 
 model PartnerType {

@@ -3,6 +3,8 @@ import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/dist/Draggable'
 
+import Tag from '../Tag/Tag'
+
 interface Props {
   avatar?: string
   firstName?: string
@@ -239,42 +241,12 @@ const Badge = ({
           alt="clip"
           className="relative z-clip mx-auto -mb-6 h-[222px] w-[58px]"
         />
-        <div className="relative">
-          <img
-            src={
-              avatar || firstName || lastName
-                ? '/images/tag.png'
-                : '/images/tag--blank.png'
-            }
-            alt="conference badge"
-            className="pointer-events-none relative z-card h-[537px] w-[351px]"
-          />
-          <div className="card-shadow absolute inset-0 bg-[#747474] blur-[42px]" />
-        </div>
-        <div className="absolute left-[70px] top-[335px] z-content pr-4 text-white">
-          {firstName && (
-            <h3 className="m-0 -mb-1 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-sandyBrown">
-              {firstName}
-            </h3>
-          )}
-          {lastName && (
-            <h3 className="m-0 p-0 font-condensed text-[82px] font-normal uppercase leading-none text-chestnutRose">
-              {lastName}
-            </h3>
-          )}
-          {company && (
-            <h4 className="font-wide text-sm uppercase leading-none text-white">
-              {company}
-            </h4>
-          )}
-          {avatar && (
-            <img
-              src={avatar}
-              alt={`${firstName} ${lastName}`}
-              className="float-right mt-2 h-[120px] w-[120px] rounded-full border-2 border-white"
-            />
-          )}
-        </div>
+        <Tag
+          firstName={firstName}
+          lastName={lastName}
+          company={company}
+          avatar={avatar}
+        />
       </div>
     </div>
   )
