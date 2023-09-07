@@ -30,6 +30,10 @@ export const QUERY = gql`
 
 export const Loading = () => <div />
 
+// If you can't find the partner in the database, redirect to the home page. At
+// the top of HomePage.tsx, if there's not a slug specified in the URL, it
+// will default to whatever is set in the Constants.ts file as
+// `Constants.DEFAULT_PARTNER_SLUG`
 export const Empty = () => {
   navigate(routes.home())
 }

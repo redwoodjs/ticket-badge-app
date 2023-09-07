@@ -1,6 +1,7 @@
 import type { APIGatewayEvent, Context } from 'aws-lambda'
 
 import { db } from 'src/lib/db'
+import { og } from 'src/lib/og'
 
 /**
  * The handler function is your code that processes http request events.
@@ -80,6 +81,17 @@ const updateParticipant = async (participantId: string, providerUser) => {
       company: providerUser.company,
     },
   })
+
+  // We have to do this in 2 database calls because the ogImage grabs the info
+  // out of the database and then displays it.
+  // If we try to run the `og` function beforehand and make a single database
+  // call it won't have everything it needs
+  const ogImage = await og(parseInt(participantId))
+  await db.participant.update({
+    where: { id: parseInt(participantId) },
+    data: { ogImage },
+  })
+
   return
 }
 

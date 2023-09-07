@@ -30,7 +30,7 @@ const Share = ({ participantId }: Props) => {
                 href={TwitterShareUrl({
                   description: 'I just registered for RedwoodJS Conf!',
                   hashtags: 'RedwoodJSConf',
-                  url: 'https://redwoodjsconf.com',
+                  url: `${process.env.REDWOOD_ENV_BASE_URL}/invite/${participantId}`,
                 })}
                 className="share-button"
                 target="_blank"
@@ -48,7 +48,7 @@ const Share = ({ participantId }: Props) => {
             </div>
             <div>
               <a
-                href={`https://api.apiflash.com/v1/urltoimage?access_key=eadde47932454b54a1718823d2ead7cd&wait_until=page_loaded&width=351&height=537&delay=3&url=${process.env.REDWOOD_ENV_SCREENSHOT_URL}/download/${participantId}`}
+                href={`${process.env.REDWOOD_ENV_API_FLASH}&width=351&height=537&delay=3&url=${process.env.REDWOOD_ENV_SCREENSHOT_URL}/download/${participantId}`}
                 className="share-button"
                 download="badge.png"
                 target="_blank"

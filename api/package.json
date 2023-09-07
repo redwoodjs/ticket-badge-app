@@ -13,6 +13,7 @@
     "@redwoodjs/mailer-handler-in-memory": "7.0.0-canary.285",
     "@redwoodjs/mailer-handler-nodemailer": "7.0.0-canary.285",
     "@redwoodjs/mailer-handler-studio": "7.0.0-canary.285",
-    "@redwoodjs/mailer-renderer-react-email": "7.0.0-canary.285"
+    "@redwoodjs/mailer-renderer-react-email": "7.0.0-canary.285",
+    "cloudinary": "^1.40.0"
   }
 }
