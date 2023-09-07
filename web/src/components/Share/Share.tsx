@@ -1,19 +1,15 @@
-import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import Icon from 'src/components/Icon/Icon'
 import { TwitterShareUrl } from 'src/helpers/TwitterHelpers'
-import useCookie from 'src/hooks/useCookie'
 import { useCopyToClipboard } from 'src/hooks/useCopyToClipboard'
 import { Constants } from 'src/utils/Constants'
 
-const SharePage = () => {
-  // If there is no participantId cookie, redirect to the home page
-  const [participantId] = useCookie('participantId')
-  if (!participantId) {
-    navigate(routes.home())
-  }
+interface Props {
+  participantId: number
+}
 
+const Share = ({ participantId }: Props) => {
   const [, copy] = useCopyToClipboard()
   const [copyShareText, setCopyShareText] = React.useState('Copy Share URL')
 
@@ -26,8 +22,6 @@ const SharePage = () => {
 
   return (
     <>
-      <MetaTags title="Share" description="Share page" />
-
       <main className="page h-full md:flex md:items-center">
         <div>
           <h1 className="page-title mb-4">We Can&apos;t Wait to See You</h1>
@@ -83,4 +77,4 @@ const SharePage = () => {
   )
 }
 
-export default SharePage
+export default Share

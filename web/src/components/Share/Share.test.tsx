@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import SharePage from './SharePage'
+import Share from './Share'
 
 //   Improve this test with help from the Redwood Testing Doc:
-//   https://redwoodjs.com/docs/testing#testing-pages-layouts
+//    https://redwoodjs.com/docs/testing#testing-components
 
-describe('SharePage', () => {
+describe('Share', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<SharePage />)
+      render(<Share />)
     }).not.toThrow()
   })
 })
