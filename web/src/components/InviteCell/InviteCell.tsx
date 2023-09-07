@@ -1,3 +1,5 @@
+import { Redirect, routes } from '@redwoodjs/router'
+
 import ParticipantForm from '../ParticipantForm/ParticipantForm'
 
 export const QUERY = gql`
@@ -27,7 +29,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div />
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => <Redirect to={routes.home()} />
 
 export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
