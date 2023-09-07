@@ -15,6 +15,7 @@
     "@redwoodjs/auth-dbauth-web": "7.0.0-canary.285",
     "@redwoodjs/forms": "7.0.0-canary.285",
     "@redwoodjs/router": "7.0.0-canary.285",
+    "@redwoodjs/vite": "7.0.0-canary.285",
     "@redwoodjs/web": "7.0.0-canary.285",
     "framer-motion": "^10.16.0",
     "gsap": "3.12.2",
@@ -24,7 +25,6 @@
     "react-dom": "18.3.0-canary-035a41c4e-20230704"
   },
   "devDependencies": {
-    "@redwoodjs/vite": "7.0.0-canary.285",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.28",
     "postcss-loader": "^7.3.3",

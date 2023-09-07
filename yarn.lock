@@ -5464,7 +5464,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/api-server@npm:7.0.0-canary.285+5d86ac4c4":
+"@redwoodjs/api-server@npm:7.0.0-canary.285, @redwoodjs/api-server@npm:7.0.0-canary.285+5d86ac4c4":
   version: 7.0.0-canary.285
   resolution: "@redwoodjs/api-server@npm:7.0.0-canary.285"
   dependencies:
@@ -9523,6 +9523,7 @@ __metadata:
     "@envelop/response-cache": 3.2.0
     "@react-email/components": 0.0.7
     "@redwoodjs/api": 7.0.0-canary.285
+    "@redwoodjs/api-server": 7.0.0-canary.285
     "@redwoodjs/auth-dbauth-api": 7.0.0-canary.285
     "@redwoodjs/graphql-server": 7.0.0-canary.285
     "@redwoodjs/mailer-core": 7.0.0-canary.285

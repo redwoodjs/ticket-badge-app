@@ -7,11 +7,13 @@ app = "badge-app-production"
 primary_region = "iad"
 
 [build]
+  build-target = "api_fe_serve"
 
 [deploy]
   release_command = ".fly/release.sh"
 
 [env]
+  MIGRATE_ON_BOOT = "true"
   PORT = "8910"
   REDWOOD_DISABLE_TELEMETRY = "1"
 
