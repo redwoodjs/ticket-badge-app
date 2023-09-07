@@ -4,7 +4,7 @@
 #
 
 app = "badge-app-production"
-primary_region = "den"
+primary_region = "iad"
 
 [build]
 
