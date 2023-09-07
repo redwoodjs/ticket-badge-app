@@ -30,7 +30,7 @@ const Tag = ({
           {lastName}
         </h3>
         {company && (
-          <h4 className="min-h-[30px] font-wide text-sm font-normal uppercase leading-none text-white">
+          <h4 className="max-h-[27px] min-h-[27px] overflow-hidden font-wide text-sm font-normal uppercase leading-none text-white">
             {company}
           </h4>
         )}
