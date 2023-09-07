@@ -56,7 +56,7 @@ const callback = async (event) => {
 
   try {
     const providerUser = await getProviderUser(access_token)
-    updateParticipant(participantId, providerUser)
+    await updateParticipant(participantId, providerUser)
 
     return {
       statusCode: 302,
@@ -87,6 +87,7 @@ const updateParticipant = async (participantId: string, providerUser) => {
   // If we try to run the `og` function beforehand and make a single database
   // call it won't have everything it needs
   const ogImage = await og(parseInt(participantId))
+  console.log(`🦄🦄🦄🦄🦄🦄🦄🦄 ${ogImage} 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄`)
   await db.participant.update({
     where: { id: parseInt(participantId) },
     data: { ogImage },
