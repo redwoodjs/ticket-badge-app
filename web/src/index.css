@@ -83,8 +83,8 @@
   }
 
   @media (min-height: 888px) {
-    .form-placement {
-      @apply bottom-auto -top-2
+    .badge-placement {
+      @apply !bottom-auto !-top-[135px]
     }
   }
 
