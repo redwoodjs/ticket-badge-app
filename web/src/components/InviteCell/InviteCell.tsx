@@ -6,6 +6,7 @@ import ParticipantForm from '../ParticipantForm/ParticipantForm'
 export const QUERY = gql`
   query InviteParticipantQuery($id: Int!) {
     participant(id: $id) {
+      id
       avatar
       name
       ogImage
@@ -39,7 +40,6 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ participant }) => {
-  console.log({ participant })
   return (
     <>
       <MetaTags
