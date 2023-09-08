@@ -81,12 +81,12 @@ COPY --chown=node:node --from=web_build /home/node/app/web/dist /home/node/app/w
 
 ENV NODE_ENV=production
 ENV PRISMA_HIDE_UPDATE_MESSAGE=true
-ENV REDWOOD_ENV_BASE_URL=https://badge-app-staging.fly.dev
-ENV REDWOOD_ENV_SCREENSHOT_URL=https://badge-app-staging.fly.dev
+ENV REDWOOD_ENV_BASE_URL=https://ticket.redwoodjs.com
+ENV REDWOOD_ENV_SCREENSHOT_URL=https://ticket.redwoodjs.com
 ENV RWJS_EXP_SSR_GRAPHQL_ENDPOINT=http://127.0.0.1:8910/.redwood/functions/graphql
 ENV GITHUB_OAUTH_CLIENT_ID=1ca0354cfbd95b99a884
 ENV GITHUB_OAUTH_SCOPES=read:user
-ENV GITHUB_OAUTH_REDIRECT_URI=https://badge-app-staging.fly.dev/.redwood/functions/oauth/callback
+ENV GITHUB_OAUTH_REDIRECT_URI=https://ticket.redwoodjs.com/.redwood/functions/oauth/callback
 ENV REDWOOD_ENV_CLOUDINARY_CLOUD=duh8p234y
 ENV REDWOOD_ENV_CLOUDINARY_UPLOAD_LOGOS=8FCiAN_logos
 ENV REDWOOD_ENV_CLOUDINARY_UPLOAD_BADGES=badges
