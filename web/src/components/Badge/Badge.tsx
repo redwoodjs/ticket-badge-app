@@ -127,9 +127,6 @@ const Badge = ({
         })
       )
 
-      // let startX = 0
-      // let startY = 0
-
       const ENDX = myCordFront.current.getAttribute('x2')
       const ENDY = myCordFront.current.getAttribute('y2')
 
@@ -140,15 +137,7 @@ const Badge = ({
 
       // CREATE THE DRAGGABLE
       myDraggable.current = Draggable.create(BADGE, {
-        onPress: function (e) {
-          startX = e.x
-          startY = e.y
-        },
         onDrag: function () {
-          gsap.to('.card-shadow', {
-            scale: 0.75,
-            y: 100,
-          })
           gsap.set(CORD_FRONT, {
             attr: {
               x2: this.x + 175,
@@ -168,11 +157,6 @@ const Badge = ({
           })
         },
         onRelease: function () {
-          gsap.to('.card-shadow', {
-            scale: 1,
-            y: 0,
-            duration: 0.5,
-          })
           gsap.to(CORD_FRONT, {
             attr: {
               x2: ENDX,
