@@ -93,6 +93,7 @@ ENV REDWOOD_ENV_CLOUDINARY_UPLOAD_BADGES=badges
 ENV SMTP_HOST=smtp.resend.com
 ENV SMTP_PORT=465
 ENV SMTP_USERNAME=resend
+ENV REDWOOD_ENV_API_FLASH=https://api.apiflash.com/v1/urltoimage?access_key=eadde47932454b54a1718823d2ead7cd&wait_until=page_loaded
 
 COPY --chown=node:node .fly .fly
 
