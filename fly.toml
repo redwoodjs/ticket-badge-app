@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for badge-app-production on 2023-09-05T12:06:31-07:00
+# fly.toml app configuration file generated for badge-app-staging on 2023-09-07T13:54:23-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "badge-app-production"
+app = "badge-app-staging"
 primary_region = "iad"
 
 [build]
@@ -22,5 +22,5 @@ primary_region = "iad"
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
-  min_machines_running = 1
+  min_machines_running = 0
   processes = ["app"]
