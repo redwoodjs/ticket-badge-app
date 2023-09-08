@@ -11,7 +11,6 @@ WORKDIR /home/node/app
 
 COPY --chown=node:node .yarn/plugins .yarn/plugins
 COPY --chown=node:node .yarn/releases .yarn/releases
-COPY --chown=node:node .yarn/patches .yarn/patches
 COPY --chown=node:node .yarnrc.yml .
 COPY --chown=node:node package.json .
 COPY --chown=node:node api/package.json api/
@@ -60,7 +59,6 @@ WORKDIR /home/node/app
 
 COPY --chown=node:node .yarn/plugins .yarn/plugins
 COPY --chown=node:node .yarn/releases .yarn/releases
-COPY --chown=node:node .yarn/patches .yarn/patches
 COPY --chown=node:node .yarnrc.yml .
 COPY --chown=node:node api/package.json api/package.json
 COPY --chown=node:node web/package.json web/package.json
