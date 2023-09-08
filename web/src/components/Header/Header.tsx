@@ -21,7 +21,7 @@ const Header = ({ isNavShowing = false, toggleNav }: Props) => {
         <ul>
           <li className="lg:hidden">
             <button className="text-xl" onClick={toggleNav}>
-              x
+              &times;
             </button>
           </li>
           <li>
