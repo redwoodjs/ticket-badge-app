@@ -35,5 +35,8 @@
     "glob": "^10.3.3",
     "node-html-parser": "^6.1.6",
     "tsx": "^3.12.7"
+  },
+  "resolutions": {
+    "@redwoodjs/vite@7.0.0-canary.285": "patch:@redwoodjs/vite@npm%3A7.0.0-canary.285#./.yarn/patches/@redwoodjs-vite-npm-7.0.0-canary.285-46d340292c.patch"
   }
 }
