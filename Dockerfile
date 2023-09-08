@@ -32,19 +32,23 @@ FROM base as api_build
 COPY --chown=node:node api api
 RUN yarn redwood build api
 
-# web prerender build
-# ------------------------------------------------
-# FROM api_build as web_build_with_prerender
-
-# COPY --chown=node:node web web
-# RUN yarn redwood build web
-
 # web build
 # ------------------------------------------------
 FROM base as web_build
 
 COPY --chown=node:node web web
 RUN yarn redwood build web --no-prerender
+
+# DB and data migrations
+# ------------------------------------------------
+# ideal place for `prisma migrate` and `@redwood/data-migrate`
+
+# web prerender build
+# ------------------------------------------------
+# FROM api_build as web_build_with_prerender
+
+# COPY --chown=node:node web web
+# RUN yarn redwood build web
 
 # serve api and fe
 # ------------------------------------------------
