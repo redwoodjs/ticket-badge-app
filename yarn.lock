@@ -6166,6 +6166,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/vite@patch:@redwoodjs/vite@npm%3A7.0.0-canary.285#./.yarn/patches/@redwoodjs-vite-npm-7.0.0-canary.285-46d340292c.patch::locator=root-workspace-0b6124%40workspace%3A.":
+  version: 7.0.0-canary.285
+  resolution: "@redwoodjs/vite@patch:@redwoodjs/vite@npm%3A7.0.0-canary.285#./.yarn/patches/@redwoodjs-vite-npm-7.0.0-canary.285-46d340292c.patch::version=7.0.0-canary.285&hash=a66648&locator=root-workspace-0b6124%40workspace%3A."
+  dependencies:
+    "@babel/runtime-corejs3": 7.22.11
+    "@redwoodjs/internal": 7.0.0-canary.285+5d86ac4c4
+    "@redwoodjs/project-config": 7.0.0-canary.285+5d86ac4c4
+    "@redwoodjs/web": 7.0.0-canary.285+5d86ac4c4
+    "@swc/core": 1.3.60
+    "@vitejs/plugin-react": 4.0.4
+    acorn-loose: 8.3.0
+    buffer: 6.0.3
+    core-js: 3.32.0
+    dotenv-defaults: 5.0.2
+    express: 4.18.2
+    http-proxy-middleware: 2.0.6
+    isbot: 3.6.8
+    react: 18.3.0-canary-035a41c4e-20230704
+    react-server-dom-webpack: 18.3.0-canary-035a41c4e-20230704
+    vite: 4.4.9
+    yargs-parser: 21.1.1
+  bin:
+    rw-dev-fe: dist/devFeServer.js
+    rw-serve-fe: dist/runFeServer.js
+    rw-vite-build: bins/rw-vite-build.mjs
+    rw-vite-dev: bins/rw-vite-dev.mjs
+    vite: bins/vite.mjs
+  checksum: a39a7debb83659d5e21f5a48039ec29bdcaf9019487db054a515b6b602e3d587e5fdc6a8591895507e82cf31b38c70b8521bffdf0615dd3c595bbd90c0803bc4
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/web-server@npm:7.0.0-canary.285+5d86ac4c4":
   version: 7.0.0-canary.285
   resolution: "@redwoodjs/web-server@npm:7.0.0-canary.285"
