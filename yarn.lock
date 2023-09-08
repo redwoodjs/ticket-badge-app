@@ -1970,18 +1970,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@envelop/response-cache@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@envelop/response-cache@npm:3.2.0"
+"@envelop/response-cache@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@envelop/response-cache@npm:5.2.0"
   dependencies:
-    "@graphql-tools/utils": ^8.8.0
+    "@graphql-tools/utils": ^10.0.3
+    "@whatwg-node/fetch": ^0.9.0
     fast-json-stable-stringify: ^2.1.0
-    lru-cache: ^6.0.0
-    tslib: ^2.4.0
+    lru-cache: ^10.0.0
+    tslib: ^2.5.0
   peerDependencies:
-    "@envelop/core": ^2.6.0
+    "@envelop/core": ^4.0.1
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 251c857bac43b78a2c2e8db76bc0dce6ae783807a627bf4f82c4920bc896370e6fb3c52ba864a1c5b99b16605b678fa752e477b349153c346c1da51411e65050
+  checksum: 05d7602396f237cab42bf3503ea6a5a8112701f13577f9fd8e061be01a67bbc88e7933f18351854f4baaec715ab6a61b1240600a90e4728ac12f202ee1238581
   languageName: node
   linkType: hard
 
@@ -3430,6 +3431,19 @@ __metadata:
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
   checksum: fbdf5a2db5c89fe49adaa244cde6c03b43d65d9072a58cf696fefd769909dff1e3117759871a07a2e4a0a0250b7ca9f7251efe568041d2f0aea305c3ca97e0d6
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/utils@npm:^10.0.3":
+  version: 10.0.6
+  resolution: "@graphql-tools/utils@npm:10.0.6"
+  dependencies:
+    "@graphql-typed-document-node/core": ^3.1.1
+    dset: ^3.1.2
+    tslib: ^2.4.0
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 85fb8faa73bd548e0dafe1d52710f246c0cacecf0f315488e7530fd3474f9642fc1cb75bd83965de1933cefc5aa5d2e579e4fd703d9113c8d95c0a67f0f401d2
   languageName: node
   linkType: hard
 
@@ -8992,6 +9006,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@whatwg-node/fetch@npm:^0.9.0":
+  version: 0.9.12
+  resolution: "@whatwg-node/fetch@npm:0.9.12"
+  dependencies:
+    "@whatwg-node/node-fetch": ^0.4.17
+    urlpattern-polyfill: ^9.0.0
+  checksum: c6075522c25630b1db92b1b6db06de577db6de3f6e8a0dfb19ec4b0b345368f05c311e0f5a5028ed770014ad41d746e0e0adeede0102d8e9f502b98a2f7247e0
+  languageName: node
+  linkType: hard
+
 "@whatwg-node/node-fetch@npm:^0.3.6":
   version: 0.3.6
   resolution: "@whatwg-node/node-fetch@npm:0.3.6"
@@ -9002,6 +9026,19 @@ __metadata:
     fast-url-parser: ^1.1.3
     tslib: ^2.3.1
   checksum: 49e4fd5e682d1fa1229b2c13c06074c6a633eddbe61be162fd213ddb85d6d27d51554b3cced5f6b7f3be1722a64cca7f5ffe0722d08b3285fe2f289d8d5a045d
+  languageName: node
+  linkType: hard
+
+"@whatwg-node/node-fetch@npm:^0.4.17":
+  version: 0.4.18
+  resolution: "@whatwg-node/node-fetch@npm:0.4.18"
+  dependencies:
+    "@whatwg-node/events": ^0.1.0
+    busboy: ^1.6.0
+    fast-querystring: ^1.1.1
+    fast-url-parser: ^1.1.3
+    tslib: ^2.3.1
+  checksum: 98f8e69aea0b594bdafd86f56ed2b051be4ab875a10868414c689cd2f1516f6cab146e15517aeac380a45380862da518b077809724f5174ef32237338e4fa02f
   languageName: node
   linkType: hard
 
@@ -9520,7 +9557,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@envelop/response-cache": 3.2.0
+    "@envelop/response-cache": 5.2.0
     "@react-email/components": 0.0.7
     "@redwoodjs/api": 7.0.0-canary.285
     "@redwoodjs/api-server": 7.0.0-canary.285
