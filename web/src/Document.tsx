@@ -23,6 +23,7 @@ export const Document: React.FC<DocumentProps> = ({ children, css, meta }) => {
         ></script>
         <Css css={css} />
         <Meta tags={meta} />
+        <meta name="twitter:site" content="@redwoodjs" />
       </head>
       <body>
         <div id="redwood-app">{children}</div>

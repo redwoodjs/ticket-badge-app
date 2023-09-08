@@ -17,6 +17,7 @@ import BadgeLayout from './layouts/BadgeLayout/BadgeLayout'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+      <Route path="/twitter" page={TwitterPage} name="twitter" />
       <Route path="/og/{id:Int}" page={OgImagePage} name="ogImage" />
       <Route path="/download/{id:Int}" page={DownloadPage} name="download" />
       <Private unauthenticated="login">
