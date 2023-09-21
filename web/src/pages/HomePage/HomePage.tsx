@@ -20,7 +20,7 @@ const HomePage = ({ slug }: Props) => {
   return (
     <>
       <main className="page">
-        <ParticipantCell slug={slug} />
+        <ParticipantCell slug={slug.toLowerCase()} />
       </main>
     </>
   )
