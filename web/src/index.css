@@ -18,16 +18,13 @@
 /* eagle sight */
 @font-face {
   font-family: "Eagle Sight";
-  src: url("/fonts/eagleSight/EagleSightRegular.ttf") format("truetype"),
-    url("/fonts/eagleSight/eaglesightregular-webfont.woff") format("woff"),
-    url("/fonts/eagleSight/eaglesightregular-webfont.woff2") format("woff2");
+  src: url("/fonts/eagleSight/EagleSightRegular.ttf") format("truetype"), url("/fonts/eagleSight/eaglesightregular-webfont.woff") format("woff"), url("/fonts/eagleSight/eaglesightregular-webfont.woff2") format("woff2");
 }
 
 /* sherman */
 @font-face {
   font-family: "Sherman";
-  src: url("/fonts/sherman/Sherman-Display.woff") format("woff"),
-    url("/fonts/sherman/Sherman-Display.woff2") format("woff2");
+  src: url("/fonts/sherman/Sherman-Display.woff") format("woff"), url("/fonts/sherman/Sherman-Display.woff2") format("woff2");
 }
 
 @layer base {
