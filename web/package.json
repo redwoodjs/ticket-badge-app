@@ -32,5 +32,8 @@
   },
   "name": "web",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "scripts": {
+    "build-storybook": "yarn storybook build --config-dir ../node_modules/@redwoodjs/testing/config/storybook/"
+  }
 }
